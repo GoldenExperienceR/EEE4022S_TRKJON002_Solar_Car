@@ -1,0 +1,97 @@
+# ---------------------------------------------------------------
+# EEE4022S Solar Car — .gitignore
+# ---------------------------------------------------------------
+
+# --- MATLAB / Simulink ---
+slprj/
+sccprj/
+codegen/
+*.slxc
+*.mexw64
+*.mexa64
+*.mexmaci64
+*.asv
+*.autosave
+*.slx.r20*
+*.mdl.r20*
+*.slx.original
+*.mdl.original
+*.slx.bak
+octave-workspace
+
+# Simulink cache & build residue
+*.slxp
+*.sldd.r20*
+html/
+
+# MATLAB session / preference files
+matlab.mat
+startup.m.bak
+
+# --- STM32CubeIDE / STM32CubeMX ---
+Debug/
+Release/
+.settings/
+.metadata/
+*.launch
+*.o
+*.d
+*.su
+*.elf
+*.bin
+*.hex
+*.map
+*.list
+*.cyclo
+.mxproject
+
+# --- Arduino / PlatformIO ---
+.pio/
+.pioenvs/
+.piolibdeps/
+build/
+*.ino.cpp
+*.ino.hex
+*.ino.elf
+
+# --- Python / Anaconda ---
+__pycache__/
+*.py[cod]
+*.egg-info/
+.ipynb_checkpoints/
+.venv/
+venv/
+env/
+.conda/
+*.log
+
+# --- KiCad / EDA (if used for schematics) ---
+*-backups/
+*.kicad_pcb-bak
+*.kicad_sch-bak
+*.net
+fp-info-cache
+*.lck
+
+# --- CAD ---
+*.f3d.lock
+*.FCStd1
+*.FCBak
+
+# --- OS / editor cruft ---
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+.DS_Store
+*.swp
+*~
+.vscode/
+!.vscode/settings.json
+!.vscode/extensions.json
+
+# --- Large data / captures (keep out of git; summarise instead) ---
+data/raw/
+*.csv.gz
+*.mat
+!models/*.mat

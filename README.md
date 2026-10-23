@@ -18,6 +18,7 @@ built for educational demonstration and outreach.
 | `analysis/` | Python/Jupyter post-processing — test data reduction, efficiency calculations, plots for the report. |
 | `hardware/` | Electrical schematics, PCB files, mechanical drawings, and the bill of materials. |
 | `docs/` | Design notes, test procedures, meeting notes, and outreach material. |
+| `testing code/` | Proof-of-concept spikes and unit-test sketches, named by Master Test Plan ID (e.g. `U-06_ina219_calibration`). Never promoted into `firmware/`. |
 
 ## Constraints
 

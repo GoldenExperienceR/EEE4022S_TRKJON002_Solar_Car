@@ -1,7 +1,7 @@
 // Solar tracker firmware — Arduino Nano (runs standalone, no PC needed).
 // Pin-out (KiCad U2): SERVO_PAN D9, SERVO_TILT D10, LDR_TL/TR/BL/BR A0..A3, MOVING (from ESP32) D2.
 // LDRs: 5V -> LDR -> Ax -> R -> GND (higher reading = more light), all four R equal.
-// Power: Nano VIN from Buck B (~8 V), servos from Buck A (5 V), common GND.
+// Power: Nano (5V pin, not VIN) and both servos from Buck A (5 V rail), common GND.
 //
 // Turn-based tracking (one axis per turn):
 //   DECIDE: pan needed (|dH| > TOL)? tilt needed (|dV| > TOL)? Pan first; after a turn the

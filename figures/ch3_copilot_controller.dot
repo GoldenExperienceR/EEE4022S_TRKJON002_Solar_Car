@@ -1,0 +1,31 @@
+digraph G {
+  rankdir=LR; splines=spline; nodesep=0.35; ranksep=0.45; newrank=true;
+  node [shape=box, style="rounded,filled", fillcolor="#eef5f8", color="#1a6b86", fontname="Helvetica", fontsize=12, penwidth=1.2];
+  edge [color="#333333", fontname="Helvetica", fontsize=11, arrowsize=0.7];
+
+  drv [label="Driver (phone)\nthrottle T, steer S", fillcolor="#fff4e0", color="#c47a00"];
+  mix [label="Differential mix\nL = T(100 + S)/100\nR = T(100 − S)/100"];
+  add [label="Add correction\nL + u,  R − u"];
+  sat [label="Limit 0–100 %\n(excess moved to\nthe other wheel)"];
+  pwm [label="Duty map\n40–93 %, 20 kHz"];
+  gate [label="Front guard\n(drive enable)"];
+  mot [label="DRV8871 ×2\nTT motors ×4", fillcolor="#e8f3e8", color="#2e7d32"];
+
+  us [label="Side HC-SR04\ndL, dR", fillcolor="#f0ecf8", color="#5e35b1"];
+  prox [label="Proximity\np = (60 − d)/60\n(0 if d ≥ 60 cm)"];
+  err [label="Error\ne = pL − pR"];
+  dz [label="Dead band\n|e| < 0.1 → 0"];
+  kp [label="Gain\nu = K_P · e\n(K_P = 100)"];
+
+  usF [label="Front HC-SR04\ndF", fillcolor="#f0ecf8", color="#5e35b1"];
+  hyst [label="Hysteresis\nstop: dF < 25 cm\nrelease: dF > 30 cm"];
+
+  drv -> mix -> add -> sat -> pwm -> gate -> mot;
+  us -> prox -> err -> dz -> kp;
+  kp -> add [label="u"];
+  usF -> hyst;
+  hyst -> gate [label="stop"];
+
+  {rank=same; drv; us; usF}
+  {rank=same; mix; prox; hyst}
+}

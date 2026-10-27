@@ -72,6 +72,7 @@ env/
 *.net
 fp-info-cache
 *.lck
+*.kicad_prl
 
 # --- CAD ---
 *.f3d.lock

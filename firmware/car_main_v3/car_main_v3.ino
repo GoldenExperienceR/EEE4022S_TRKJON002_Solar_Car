@@ -15,7 +15,7 @@
 //         Copilot: proportional side correction from L/R ultrasonics (tune at the top); stops if front < STOP_CM.  Pack < 9.0 V for 3 s -> drive locked.
 // Page -> car: T0..100 throttle | D1 drive | S stop | J-100..100 steer | M0/M1 mode | K keep-alive (every 200 ms)
 // Car -> page (10 Hz JSON): mps v i w soc dF dL dR dB chg fs blk lv ok{bat,pv,enc,us[4]}
-// Log: 5 Hz in RAM (11 min ring). http://192.168.4.1/log.csv downloads it, /log/clear empties it.
+// Log: RAM ring of 3300 rows, 5 Hz while driving / 1 Hz when parked (~55 min parked). http://192.168.4.1/log.csv downloads it, /log/clear empties it.
 #include <WiFi.h>
 #include <WebServer.h>
 #include <WebSocketsServer.h>
@@ -40,7 +40,7 @@ const float W_U       = 1.0;    // weight on the user's throttle/steer
 const float W_S       = 1.0;    // weight on the sensor correction
 float cpE = 0, cpU = 0;                       // copilot error, correction
 const float LV_CUT = 9.0;                     // pack low-voltage lock (stretch goal)
-const float PACK_AH = 3.5;
+const float PACK_AH = 3.35;                   // INR18650-35E standard capacity (datasheet)
 const int   SLOTS = 30; const float WHEEL_MM = 65.0;
 
 // ------------------------------------------------------------------ drive
@@ -108,14 +108,16 @@ void usService() {
 // ------------------------------------------------------------------ power (INA219 x2)
 Adafruit_INA219 inaBat(0x40), inaPv(0x41);   // 0x40 = A0/A1 open = battery/load; 0x41 = solar
 bool batOk = false, pvOk = false;
-float packV = 0, packI = 0, pvW = 0, soc = -1;
+float packV = 0, packI = 0, pvW = 0, pvI = 0, soc = -1;  // soc = -1 when no battery reading (shown blank)
+float socEst = -1;                            // coulomb-counted SOC, kept across INA219 dropouts
 bool i2cHere(uint8_t a) { Wire.beginTransmission(a); return Wire.endTransmission() == 0; }
-float socFromV(float v) {                     // rough resting curve per cell (INR18650-35E)
-  const float c[] = {3.0, 3.3, 3.5, 3.6, 3.7, 3.8, 3.9, 4.0, 4.1, 4.2}, s[] = {0, 5, 12, 20, 35, 50, 65, 78, 90, 100};
-  float x = v / 3;
+float socFromV(float v) {                     // rested OCV-SOC per cell, Samsung INR18650-26E (NMC), Yadav et al. 2026, Table 4
+  const float c[] = {2.80, 3.4212, 3.5024, 3.5517, 3.5877, 3.6272, 3.6867, 3.7732, 3.8702, 3.9732, 4.1307},
+              s[] = {0, 10, 20, 30, 40, 50, 60, 70, 80, 90, 100};
+  float x = v / 3;                            // assumes balanced cells (BMS balances)
   if (x <= c[0]) return 0;
-  if (x >= c[9]) return 100;
-  for (int k = 1; k < 10; k++) if (x < c[k]) return s[k - 1] + (s[k] - s[k - 1]) * (x - c[k - 1]) / (c[k] - c[k - 1]);
+  if (x >= c[10]) return 100;
+  for (int k = 1; k < 11; k++) if (x < c[k]) return s[k - 1] + (s[k] - s[k - 1]) * (x - c[k - 1]) / (c[k] - c[k - 1]);
   return 100;
 }
 void powerCheck() {                           // 1 Hz: detect / re-init modules
@@ -130,20 +132,23 @@ void powerRead(float dt) {                    // 10 Hz
   if (batOk) {
     packV = inaBat.getBusVoltage_V() + inaBat.getShuntVoltage_mV() / 1000;
     packI = inaBat.getCurrent_mA() / 1000;    // + = discharging, - = charging (U-06 / INT-02 sign)
-    if (soc < 0) soc = socFromV(packV);       // first reading: start from the voltage
-    soc = constrain(soc - packI * dt / 3600 / PACK_AH * 100, 0.0f, 100.0f);
-  } else { packV = packI = 0; soc = -1; }
-  pvW = pvOk ? inaPv.getBusVoltage_V() * inaPv.getCurrent_mA() / 1000 : 0;
-  if (pvW < 0) pvW = 0;
+    if (socEst < 0) socEst = socFromV(packV); // first reading only: start from the voltage (car at rest at power-up)
+    socEst = constrain(socEst - packI * dt / 3600 / PACK_AH * 100, 0.0f, 100.0f);  // coulomb counting, eta = 1
+    soc = socEst;
+  } else { packV = packI = 0; soc = -1; }     // dropout: hide SOC but keep socEst, so a reconnect under load
+                                              // does not restart from a sagging voltage
+  pvI = pvOk ? inaPv.getCurrent_mA() / 1000 : 0;
+  if (pvI < 0) pvI = 0;
+  pvW = pvOk ? inaPv.getBusVoltage_V() * pvI : 0;
 }
 
-// ------------------------------------------------------------------ log (5 Hz ring, ~11 min)
-struct Row { uint32_t t; uint16_t mV; int16_t mA; uint16_t pvmW, mmps, d[4]; uint8_t soc, flags; int8_t u; };
+// ------------------------------------------------------------------ log (ring: 5 Hz while driving, 1 Hz when parked; ~55 min parked)
+struct Row { uint32_t t; uint16_t mV; int16_t mA; uint16_t pvmW, pvmA, mmps, d[4]; uint8_t soc, flags; int8_t u; };
 const int LOG_N = 3300; Row* logBuf; int logHead = 0, logCount = 0;
 void logRow() {
   if (!logBuf) return;
   Row& r = logBuf[logHead];
-  r.t = millis(); r.mV = packV * 1000; r.mA = packI * 1000; r.pvmW = pvW * 1000; r.mmps = mps * 1000;
+  r.t = millis(); r.mV = packV * 1000; r.mA = packI * 1000; r.pvmW = pvW * 1000; r.pvmA = pvI * 1000; r.mmps = mps * 1000;
   for (int i = 0; i < 4; i++) r.d[i] = dist[i] < 0 ? 0xFFFF : (uint16_t)dist[i];
   r.soc = soc < 0 ? 255 : (uint8_t)soc;
   r.u = (int8_t)constrain((int)lroundf(cpU), -127, 127);
@@ -157,15 +162,15 @@ WebSocketsServer ws(81);
 
 void sendLog() {
   http.setContentLength(CONTENT_LENGTH_UNKNOWN);
-  http.send(200, "text/csv", "t_s,pack_V,pack_A,pv_W,speed_mps,soc_pct,dF_cm,dL_cm,dR_cm,dB_cm,gear,driving,failsafe,copilot_block,lv_lock,bat_ok,pv_ok,copilot_u\n");
+  http.send(200, "text/csv", "t_s,pack_V,pack_A,pv_W,pv_A,speed_mps,soc_pct,dF_cm,dL_cm,dR_cm,dB_cm,gear,driving,failsafe,copilot_block,lv_lock,bat_ok,pv_ok,copilot_u\n");
   char line[160]; String chunk;
   int start = (logHead - logCount + LOG_N) % LOG_N;
   for (int k = 0; k < logCount; k++) {
     Row& r = logBuf[(start + k) % LOG_N];
     int g = r.flags & 1;
     char d[4][8]; for (int i = 0; i < 4; i++) { if (r.d[i] == 0xFFFF) strcpy(d[i], ""); else snprintf(d[i], 8, "%u", r.d[i]); }
-    snprintf(line, sizeof line, "%.2f,%.3f,%.3f,%.3f,%.3f,%s,%s,%s,%s,%s,%d,%d,%d,%d,%d,%d,%d,%d\n",
-      r.t / 1000.0, r.mV / 1000.0, r.mA / 1000.0, r.pvmW / 1000.0, r.mmps / 1000.0,
+    snprintf(line, sizeof line, "%.2f,%.3f,%.3f,%.3f,%.3f,%.3f,%s,%s,%s,%s,%s,%d,%d,%d,%d,%d,%d,%d,%d\n",
+      r.t / 1000.0, r.mV / 1000.0, r.mA / 1000.0, r.pvmW / 1000.0, r.pvmA / 1000.0, r.mmps / 1000.0,
       r.soc == 255 ? "" : String(r.soc).c_str(), d[0], d[1], d[2], d[3], g,
       (r.flags >> 2) & 1, (r.flags >> 3) & 1, (r.flags >> 4) & 1, (r.flags >> 5) & 1, (r.flags >> 6) & 1, (r.flags >> 7) & 1, r.u);
     chunk += line;
@@ -287,5 +292,5 @@ void loop() {
     else tLow = 0;
     broadcast();
   }
-  if (now - t5 >= 200) { t5 = now; logRow(); }
+  if (now - t5 >= (gear != 0 || mps > 0.01 ? 200u : 1000u)) { t5 = now; logRow(); }   // 1 Hz when parked stretches the log for charging sessions
 }

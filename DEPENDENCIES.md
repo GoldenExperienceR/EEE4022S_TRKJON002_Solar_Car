@@ -3,7 +3,7 @@
 Running list of everything this project needs installed. Kept current as
 libraries are added — if a sketch includes something, it is listed here.
 
-Last updated: 2026-09-14
+Last updated: 2026-10-28
 
 ---
 
@@ -15,7 +15,7 @@ Last updated: 2026-09-14
 | **esp32** board package | Espressif Systems, via Boards Manager | Board: **ESP32 Dev Module**. Note your core version — 2.x and 3.x differ in the LEDC PWM API, and sketches here guard for both. |
 | **CP210x VCP driver** | Silicon Labs — Universal Windows Driver | Required. The SEEIT ESP32-DEV-38P uses a **CP2102**, not the CH340 found on many 30-pin boards, so a driver installed for an older board does not cover it. The current package is **INF-based with no .exe** — unzip and right-click `silabser.inf` → Install. |
 | MATLAB / Simulink | university licence | `simulation/` |
-| Python (Anaconda) | | `analysis/` |
+| Python (Anaconda) | | `firmware/*/make_header.py` (gzips the dashboard page into `dashboard_gz.h`) |
 
 ### Bench setup gotchas — hard-won
 
@@ -44,7 +44,7 @@ Last updated: 2026-09-14
 - **Header:** `WebSocketsServer.h`
 - **Install:** Library Manager → search `WebSockets` → pick the one authored by **Markus Sattler**
 - **Source:** `github.com/Links2004/arduinoWebSockets`
-- **Used by:** spike 01a, spike 01b
+- **Used by:** `car_main_v0`–`v4`, spikes 01a/01b, INT sketches
 - **Why:** persistent full-duplex link between the ESP32 and the dashboard.
   Plain HTTP cannot push telemetry at 10–20 Hz.
 
@@ -57,32 +57,33 @@ Last updated: 2026-09-14
 
 | Header | Purpose | Used by |
 |---|---|---|
-| `WiFi.h` | softAP / station mode | 01a, 01b |
-| `WebServer.h` | serves the dashboard page over HTTP :80 | 01a, 01b |
+| `WiFi.h` | softAP / station mode | `car_main_*`, 01a, 01b |
+| `WebServer.h` | serves the dashboard page over HTTP :80 | `car_main_*`, 01a, 01b |
+| `Wire.h` | I²C bus for the INA219s | `car_main_*`, INT, U-06 |
+| `Preferences.h` | stores settings in ESP32 flash (NVS) | INT-02, INT-03, INT-04 |
+
+### Adafruit INA219 — Adafruit
+
+- **Header:** `Adafruit_INA219.h`
+- **Install:** Library Manager → `Adafruit INA219` (pulls in **Adafruit BusIO** automatically)
+- **Used by:** `car_main_v4` (battery 0x40, MPPT output 0x41, panel 0x44), U-06, INT sketches
+- **Why:** battery and panel voltage/current over I²C for SOC and power telemetry.
+
+### Bundled with the Arduino IDE (AVR) — Arduino Nano tracker
+
+| Header | Purpose | Used by |
+|---|---|---|
+| `Servo.h` | MG90S pan/tilt servos | `tracker_nano`, U-14/U-15 |
+| `EEPROM.h` | stores tracker calibration | `tracker_nano` |
 
 ---
 
-## Arduino libraries — expected, not yet needed
+## Arduino libraries — considered, not used
 
-Listed so they can be planned for. **Do not install until the spike that needs
-them.** None of these are used by any current sketch.
-
-| Library | Author | For | Spike |
-|---|---|---|---|
-| Adafruit INA219 | Adafruit | battery voltage + current over I²C | 03 |
-| Adafruit BusIO | Adafruit | dependency of the above, auto-installed | 03 |
-| ESP32Servo | Kevin Harrington / John K. Bennett | servo control on ESP32 (the stock `Servo.h` is AVR-only) | 05 |
-| ArduinoJson | Benoît Blanchon | structured command/telemetry messages in the real firmware — spikes use compact text instead | firmware |
-
-The Arduino Nano tracker (spike 05) uses the standard AVR `Servo.h`, which ships
-with the IDE. Nothing to install there.
-
----
-
-## Python — `analysis/`
-
-Nothing pinned yet. Expected: `pandas`, `numpy`, `matplotlib`, `pyserial`.
-A `requirements.txt` goes here once the first analysis script exists.
+| Library | Author | Note |
+|---|---|---|
+| ESP32Servo | Kevin Harrington / John K. Bennett | not needed — servos are driven by the Nano with AVR `Servo.h` |
+| ArduinoJson | Benoît Blanchon | not needed — telemetry uses compact text messages |
 
 ---
 

@@ -96,3 +96,6 @@ data/raw/
 *.csv.gz
 *.mat
 !models/*.mat
+
+# --- Office lock files ---
+~$*

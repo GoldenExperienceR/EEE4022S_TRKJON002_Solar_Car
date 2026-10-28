@@ -13,20 +13,13 @@ built for educational demonstration and outreach.
 
 | Folder | Contents |
 |---|---|
-| `firmware/` | Final car firmware (`car_main_v3`, ESP32: dashboard, telemetry, co-pilot, drive) and the tracker firmware (`tracker_nano`); earlier versions in `firmware/archive/`. |
-| `testing code/` | Proof-of-concept spikes and unit-test sketches, named by test ID (e.g. `U-06_ina219_calibration`). Never promoted into `firmware/`. |
-| `simulation/` | Simulink model (`solar_car.slx`) and MATLAB scripts for the solar charging chain. |
-| `modelling and schematics/` | `schematics/` (KiCad project), `step files/` (CAD) and `online components/` (downloaded STL parts). |
-| `media/` | Test evidence, one folder per test ID (`media/<test-id>/<test-id>_<what>.mp4`). |
+| `firmware/` | Final car firmware `car_main_v4` (ESP32: dashboard, telemetry, co-pilot, drive; adds panel-side INA219 at 0x44) and the tracker firmware `tracker_nano` (Arduino Nano). `car_main_v3` is the previous release; earlier versions are in `firmware/archive/`. |
+| `testing code/` | Proof-of-concept spikes and unit/integration test sketches, named by test ID (e.g. `U-06_ina219_calibration`). Never promoted into `firmware/`. |
+| `simulation/` | Simulink models and MATLAB scripts: `solar_car.slx` (full vehicle, `build_sev.m` / `run_sev.m`) and `solar_chain.slx` (charging chain validated against SIM-01, `build_solar.m` / `run_solar.m`; see `README_solar_chain.md`). |
+| `modelling and schematics/` | `step files/` (vehicle chassis and solar tracker assemblies, zipped STEP), `online components/` (downloaded STL parts) and `schematics/`. |
+| `figures/` | Report figures, named by chapter (`ch2_`, `ch3_`, `ch4_`), appendix (`app_`, `appx_`) or test ID. Includes the power, control and tracker schematics (`ch3_*_schematic.pdf/.png`). |
+| `media/` | Test and outreach evidence, one folder per test ID (`media/<test-id>/<test-id>_<what>.mp4`). `out-01/` holds the outreach plan, ethics approval, consent form, questionnaire, presentation and responses. |
 | `results/` | Test data and logs, one folder per test ID. |
-
-### Schematics (KiCad)
-
-Open `modelling and schematics/schematics/solar_car_kicad/solar_car.kicad_pro` in KiCad 9 (files are saved in KiCad 7 format; KiCad upgrades them on first save). The project-local symbol library `solar_car` is registered in `sym-lib-table`.
-
-Sheets: Power subsystem, Controller and driver, Solar tracker. Nets cross sheets via global labels; GND, +3V3, +5V, +VMOT, VBAT and VSYS are power symbols.
-
-To change controller wiring, edit `PINMAP` at the top of `gen.py`, run `python gen.py` and reopen in KiCad. Regenerating overwrites manual edits to the `.kicad_sch` files.
 
 ## Constraints
 
@@ -39,9 +32,7 @@ To change controller wiring, edit `PINMAP` at the top of `gen.py`, run `python g
 - **Simulation:** MATLAB / Simulink
 - **Firmware:** Arduino IDE (ESP32 and Arduino Nano)
 - **Analysis:** Python via Anaconda, Jupyter
-- **CAD:** Fusion 360 / FreeCAD
-- **Schematics:** KiCad
-- **References:** Zotero
+- **CAD:** Onshape (3D-printed parts), laser cutting for acrylic decks
 
 ## Conventions
 
@@ -49,3 +40,5 @@ To change controller wiring, edit `PINMAP` at the top of `gen.py`, run `python g
   descriptive message stating what changed, since the diff will not tell you.
 - Raw test captures stay out of git (see `.gitignore`); commit the reduced data
   and the script that reduced it.
+- One current version of each results or media file — replace a corrected file
+  rather than keeping `v1`/`v2` copies.

@@ -500,12 +500,6 @@
   <div class="card bat-dep"><div class="lab">Load power</div>
     <div class="val"><span id="lw">0.00</span><span class="unit">W</span></div>
     <div class="bar"><div id="lwb" style="background:var(--cyan)"></div></div></div>
-  <div class="card" id="cPan"><div class="lab">Panel voltage</div>
-    <div class="val"><span id="sv">0.00</span><span class="unit">V</span></div>
-    <div class="bar"><div id="svb" style="background:var(--accent)"></div></div></div>
-  <div class="card" id="cPanI"><div class="lab">Panel current</div>
-    <div class="val"><span id="si">0.00</span><span class="unit">A</span></div>
-    <div class="bar"><div id="sib" style="background:var(--accent)"></div></div></div>
   <div class="card" id="cPv"><div class="lab">PV power (MPPT output)</div>
     <div class="val"><span id="w">0.00</span><span class="unit">W</span></div>
     <div class="bar"><div id="wb"></div></div></div>
@@ -564,8 +558,7 @@ const SPEED_MAX=1.0, STEP=0.1, N=Math.round(SPEED_MAX/STEP);
 const zone=cm=>cm<20?'var(--bad)':cm<50?'var(--warn)':'var(--good)';
 const OK={bat:1,pv:1,enc:1,us:[1,1,1,1]};
 function paint(d){
-  const ok=d.ok||OK, bat=!!ok.bat, pvk=!!ok.pv, pan=!!ok.pan;
-  $('cPan').classList.toggle('nc',!pan); $('cPanI').classList.toggle('nc',!pan);
+  const ok=d.ok||OK, bat=!!ok.bat, pvk=!!ok.pv;
   $('cSoc').classList.toggle('nc',!bat); document.querySelectorAll('.bat-dep').forEach(c=>c.classList.toggle('nc',!bat));
   $('cPv').classList.toggle('nc',!pvk); $('cSpd').classList.toggle('nc',!ok.enc);
   if((d.fs||d.lv) && d.gear===0 && gear!==0) showGear(0);   // car stopped itself (link loss / low voltage)
@@ -594,8 +587,6 @@ function paint(d){
   $('v').textContent=f2(bat,d.v);  $('vb').style.width=pc(bat,(d.v-9)/3.6*100);
   $('i').textContent=f2(bat,d.i);  $('ib').style.width=pc(bat,Math.abs(d.i)/2*100);
   $('lw').textContent=f2(bat,lw);  $('lwb').style.width=pc(bat,lw/20*100);
-  $('sv').textContent=f2(pan,d.sv||0); $('svb').style.width=pc(pan,(d.sv||0)/25*100);
-  $('si').textContent=f2(pan,d.si||0); $('sib').style.width=pc(pan,(d.si||0)/1*100);
   $('w').textContent=f2(pvk,d.w);  $('wb').style.width=pc(pvk,d.w/8*100);
   pv.push(pvk?d.w:NaN); ld.push(bat?lw:NaN); if(pv.length>300){pv.shift();ld.shift();}
   if(!$('tele').hidden) draw();
@@ -612,8 +603,8 @@ function draw(){
   line(pv,tok('--accent')); line(ld,tok('--cyan'));
 }
 
-/* ---------------- gear: Drive / STOP (latched, one always selected; reverse removed in v1) ---------------- */
-let gear=0, mode=0;               // gear: 1 drive, 0 stop   mode: 0 manual, 1 copilot, 2 auto
+/* ---------------- gear: Drive / STOP (latched, one always selected; forward only) ---------------- */
+let gear=0, mode=0;               // gear: 1 drive, 0 stop   mode: 0 manual, 1 co-pilot
 function showGear(g){
   gear=g; thr=0; $('tv').textContent=0; $('tf').style.height='0%';
   $('fw').classList.toggle('on',g===1); $('stop').classList.toggle('on',g===0);
@@ -628,8 +619,7 @@ $('stop').onclick=()=>setGear(0);
 
 /* ---------------- drive mode ---------------- */
 const HINT=['You drive. The car does exactly what you tell it.',
-            'You drive. The car steers away from close walls on either side and stops if something is close in front.',
-            'The car drives itself and avoids obstacles. Press STOP at any time.'];
+            'You drive. The car steers away from close walls on either side and stops if something is close in front.'];
 function setMode(m){
   mode=m; document.querySelectorAll('#mode button').forEach(b=>b.classList.toggle('on',+b.dataset.m===m));
   $('mhint').textContent=HINT[m]; send('M'+m); applyLocks();
@@ -637,12 +627,9 @@ function setMode(m){
 document.querySelectorAll('#mode button').forEach(b=>b.onclick=()=>setMode(+b.dataset.m));
 $('logclr').onclick=e=>{ e.preventDefault(); if(!USE_FAKE) fetch('/log/clear'); };
 
-function applyLocks(){
-  const auto=mode===2;
-  $('meter').classList.toggle('locked',auto||gear===0);
-  $('base').classList.toggle('locked',auto);
-  $('thint').textContent=auto?'Car is in control':gear===0?'Press Drive':'Drag up / down';
-  $('jlab').textContent=auto?'Car is steering':'steer '; $('jx').hidden=auto;
+function applyLocks(){            // the throttle is locked until DRIVE is pressed
+  $('meter').classList.toggle('locked',gear===0);
+  $('thint').textContent=gear===0?'Press Drive':'Drag up / down';
 }
 
 /* ---------------- vertical throttle meter ---------------- */

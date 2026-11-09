@@ -66,8 +66,8 @@ Last updated: 2026-10-28
 
 - **Header:** `Adafruit_INA219.h`
 - **Install:** Library Manager → `Adafruit INA219` (pulls in **Adafruit BusIO** automatically)
-- **Used by:** `car_main_v4` (battery 0x40, MPPT output 0x41, panel 0x44), U-06, INT sketches
-- **Why:** battery and panel voltage/current over I²C for SOC and power telemetry.
+- **Used by:** `car_main_v4` (battery 0x40, MPPT output 0x41), U-06, INT sketches
+- **Why:** pack voltage/current and MPPT output power over I²C for SOC and power telemetry.
 
 ### Bundled with the Arduino IDE (AVR) — Arduino Nano tracker
 

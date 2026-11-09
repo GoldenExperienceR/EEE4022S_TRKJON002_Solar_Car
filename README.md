@@ -13,7 +13,7 @@ built for educational demonstration and outreach.
 
 | Folder | Contents |
 |---|---|
-| `firmware/` | Final car firmware `car_main_v4` (ESP32: dashboard, telemetry, co-pilot, drive; adds panel-side INA219 at 0x44) and the tracker firmware `tracker_nano` (Arduino Nano). `car_main_v3` is the previous release; earlier versions are in `firmware/archive/`. |
+| `firmware/` | Final car firmware `car_main_v4` (ESP32: dashboard, telemetry, co-pilot, drive; two INA219s: pack 0x40, MPPT output 0x41) and the tracker firmware `tracker_nano` (Arduino Nano). `car_main_v3` is the previous release; earlier versions are in `firmware/archive/`. |
 | `testing code/` | Proof-of-concept spikes and unit/integration test sketches, named by test ID (e.g. `U-06_ina219_calibration`). Never promoted into `firmware/`. |
 | `simulation/` | Simulink models and MATLAB scripts: `solar_car.slx` (full vehicle, `build_sev.m` / `run_sev.m`) and `solar_chain.slx` (charging chain validated against SIM-01, `build_solar.m` / `run_solar.m`; see `README_solar_chain.md`). |
 | `modelling and schematics/` | `step files/` (vehicle chassis and solar tracker assemblies, zipped STEP), `online components/` (downloaded STL parts) and `schematics/`. |

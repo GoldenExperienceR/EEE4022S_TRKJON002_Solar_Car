@@ -1,0 +1,3 @@
+(sym_lib_table
+  (lib (name "solar_car")(type "KiCad")(uri "${KIPRJMOD}/solar_car.kicad_sym")(options "")(descr "Solar car modules"))
+)

@@ -1,0 +1,7514 @@
+(kicad_sch
+	(version 20250114)
+	(generator "eeschema")
+	(generator_version "9.0")
+	(uuid "fef8766d-1756-4973-85af-765f0f491c0a")
+	(paper "A3")
+	(title_block
+		(title "Controller and driver - ESP32, bucks, motor drive, sensors")
+		(date "2026-10-06")
+		(rev "2")
+		(company "EEE4022S Solar Car - Yonatan (TRKJON002)")
+		(comment 1 "Module-level wiring; nets joined by labels")
+	)
+	(lib_symbols
+		(symbol "solar_car:DRV8871_Module"
+			(pin_names
+				(offset 1.016)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "U"
+				(at -7.62 10.16 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "DRV8871_Module"
+				(at -7.62 -15.24 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "DRV8871 brushed DC motor driver breakout (6.5-45 V, 3.6 A peak)"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "DRV8871_Module_0_1"
+				(rectangle
+					(start -7.62 8.89)
+					(end 7.62 -13.97)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+			)
+			(symbol "DRV8871_Module_1_1"
+				(pin passive line
+					(at -10.16 5.08 0)
+					(length 2.54)
+					(name "VM"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -10.16 0 0)
+					(length 2.54)
+					(name "GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -10.16 -5.08 0)
+					(length 2.54)
+					(name "IN1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -10.16 -10.16 0)
+					(length 2.54)
+					(name "IN2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 10.16 5.08 180)
+					(length 2.54)
+					(name "OUT1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "5"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 10.16 0 180)
+					(length 2.54)
+					(name "OUT2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "6"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "solar_car:ESP32_DEV_38P"
+			(pin_names
+				(offset 1.016)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "U"
+				(at -12.7 50.8 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "ESP32_DEV_38P"
+				(at -12.7 -50.8 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "ESP32-WROOM-32 38-pin dev board (SEEIT ESP32-DEV-38P), USB-C, CP2102"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "ESP32_DEV_38P_0_1"
+				(rectangle
+					(start -12.7 49.53)
+					(end 12.7 -49.53)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+			)
+			(symbol "ESP32_DEV_38P_1_1"
+				(pin passive line
+					(at -15.24 45.72 0)
+					(length 2.54)
+					(name "3V3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -15.24 40.64 0)
+					(length 2.54)
+					(name "EN"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -15.24 35.56 0)
+					(length 2.54)
+					(name "GPIO36"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -15.24 30.48 0)
+					(length 2.54)
+					(name "GPIO39"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -15.24 25.4 0)
+					(length 2.54)
+					(name "GPIO34"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "5"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -15.24 20.32 0)
+					(length 2.54)
+					(name "GPIO35"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "6"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -15.24 15.24 0)
+					(length 2.54)
+					(name "GPIO32"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "7"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -15.24 10.16 0)
+					(length 2.54)
+					(name "GPIO33"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "8"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -15.24 5.08 0)
+					(length 2.54)
+					(name "GPIO25"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "9"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -15.24 0 0)
+					(length 2.54)
+					(name "GPIO26"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "10"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -15.24 -5.08 0)
+					(length 2.54)
+					(name "GPIO27"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "11"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -15.24 -10.16 0)
+					(length 2.54)
+					(name "GPIO14"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "12"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -15.24 -15.24 0)
+					(length 2.54)
+					(name "GPIO12"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "13"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -15.24 -20.32 0)
+					(length 2.54)
+					(name "GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "14"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -15.24 -25.4 0)
+					(length 2.54)
+					(name "GPIO13"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "15"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -15.24 -30.48 0)
+					(length 2.54)
+					(name "GPIO9"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "16"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -15.24 -35.56 0)
+					(length 2.54)
+					(name "GPIO10"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "17"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -15.24 -40.64 0)
+					(length 2.54)
+					(name "GPIO11"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "18"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -15.24 -45.72 0)
+					(length 2.54)
+					(name "5V"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "19"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 15.24 45.72 180)
+					(length 2.54)
+					(name "GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "38"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 15.24 40.64 180)
+					(length 2.54)
+					(name "GPIO23"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "37"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 15.24 35.56 180)
+					(length 2.54)
+					(name "GPIO22"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "36"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 15.24 30.48 180)
+					(length 2.54)
+					(name "GPIO1/TX"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "35"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 15.24 25.4 180)
+					(length 2.54)
+					(name "GPIO3/RX"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "34"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 15.24 20.32 180)
+					(length 2.54)
+					(name "GPIO21"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "33"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 15.24 15.24 180)
+					(length 2.54)
+					(name "GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "32"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 15.24 10.16 180)
+					(length 2.54)
+					(name "GPIO19"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "31"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 15.24 5.08 180)
+					(length 2.54)
+					(name "GPIO18"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "30"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 15.24 0 180)
+					(length 2.54)
+					(name "GPIO5"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "29"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 15.24 -5.08 180)
+					(length 2.54)
+					(name "GPIO17"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "28"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 15.24 -10.16 180)
+					(length 2.54)
+					(name "GPIO16"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "27"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 15.24 -15.24 180)
+					(length 2.54)
+					(name "GPIO4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "26"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 15.24 -20.32 180)
+					(length 2.54)
+					(name "GPIO0"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "25"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 15.24 -25.4 180)
+					(length 2.54)
+					(name "GPIO2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "24"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 15.24 -30.48 180)
+					(length 2.54)
+					(name "GPIO15"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "23"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 15.24 -35.56 180)
+					(length 2.54)
+					(name "GPIO8"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "22"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 15.24 -40.64 180)
+					(length 2.54)
+					(name "GPIO7"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "21"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 15.24 -45.72 180)
+					(length 2.54)
+					(name "GPIO6"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "20"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "solar_car:HC-SR04"
+			(pin_names
+				(offset 1.016)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "U"
+				(at -6.35 10.16 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "HC-SR04"
+				(at -6.35 -15.24 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "HC-SR04 ultrasonic distance sensor (5 V)"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "HC-SR04_0_1"
+				(rectangle
+					(start -6.35 8.89)
+					(end 6.35 -13.97)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+			)
+			(symbol "HC-SR04_1_1"
+				(pin passive line
+					(at 8.89 5.08 180)
+					(length 2.54)
+					(name "VCC"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 8.89 0 180)
+					(length 2.54)
+					(name "TRIG"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 8.89 -5.08 180)
+					(length 2.54)
+					(name "ECHO"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 8.89 -10.16 180)
+					(length 2.54)
+					(name "GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "solar_car:Motor_DC"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "M"
+				(at 3.81 1.27 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "Motor_DC"
+				(at 3.81 -1.27 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "AC032 TT geared DC motor 1:48"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "Motor_DC_0_1"
+				(circle
+					(center 0 0)
+					(radius 2.79)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+				(text "M"
+					(at 0 0 0)
+					(effects
+						(font
+							(size 1.778 1.778)
+						)
+					)
+				)
+			)
+			(symbol "Motor_DC_1_1"
+				(pin passive line
+					(at 0 5.08 270)
+					(length 2.54)
+					(name "+"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -5.08 90)
+					(length 2.54)
+					(name "-"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "solar_car:PWR_GND"
+			(power)
+			(pin_names
+				(offset 0)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "#PWR"
+				(at 0 -6.35 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Value" "GND"
+				(at 0 -3.81 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Power net GND"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "PWR_GND_0_1"
+				(polyline
+					(pts
+						(xy 0 0) (xy 0 -1.27) (xy 1.27 -1.27) (xy 0 -2.54) (xy -1.27 -1.27) (xy 0 -1.27)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "PWR_GND_1_1"
+				(pin power_in line
+					(at 0 0 270)
+					(length 0)
+					(hide yes)
+					(name "GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "solar_car:PWR_P3V3"
+			(power)
+			(pin_names
+				(offset 0)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "#PWR"
+				(at 0 -6.35 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Value" "+3V3"
+				(at 0 3.56 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Power net +3V3"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "PWR_P3V3_0_1"
+				(polyline
+					(pts
+						(xy -0.76 1.27) (xy 0 2.54)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 2.54) (xy 0.76 1.27)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 0) (xy 0 2.54)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "PWR_P3V3_1_1"
+				(pin power_in line
+					(at 0 0 90)
+					(length 0)
+					(hide yes)
+					(name "+3V3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "solar_car:PWR_P5V"
+			(power)
+			(pin_names
+				(offset 0)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "#PWR"
+				(at 0 -6.35 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Value" "+5V"
+				(at 0 3.56 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Power net +5V"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "PWR_P5V_0_1"
+				(polyline
+					(pts
+						(xy -0.76 1.27) (xy 0 2.54)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 2.54) (xy 0.76 1.27)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 0) (xy 0 2.54)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "PWR_P5V_1_1"
+				(pin power_in line
+					(at 0 0 90)
+					(length 0)
+					(hide yes)
+					(name "+5V"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "solar_car:PWR_PVMOT"
+			(power)
+			(pin_names
+				(offset 0)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "#PWR"
+				(at 0 -6.35 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Value" "+VMOT"
+				(at 0 3.56 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Power net +VMOT"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "PWR_PVMOT_0_1"
+				(polyline
+					(pts
+						(xy -0.76 1.27) (xy 0 2.54)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 2.54) (xy 0.76 1.27)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 0) (xy 0 2.54)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "PWR_PVMOT_1_1"
+				(pin power_in line
+					(at 0 0 90)
+					(length 0)
+					(hide yes)
+					(name "+VMOT"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "solar_car:PWR_VSYS"
+			(power)
+			(pin_names
+				(offset 0)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "#PWR"
+				(at 0 -6.35 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Value" "VSYS"
+				(at 0 3.56 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Power net VSYS"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "PWR_VSYS_0_1"
+				(polyline
+					(pts
+						(xy -0.76 1.27) (xy 0 2.54)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 2.54) (xy 0.76 1.27)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 0) (xy 0 2.54)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "PWR_VSYS_1_1"
+				(pin power_in line
+					(at 0 0 90)
+					(length 0)
+					(hide yes)
+					(name "VSYS"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "solar_car:Photo_Interrupter"
+			(pin_names
+				(offset 1.016)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "U"
+				(at -6.35 10.16 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "Photo_Interrupter"
+				(at -6.35 -10.16 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Slotted photo-interrupter speed sensor module (LM393 comparator)"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "Photo_Interrupter_0_1"
+				(rectangle
+					(start -6.35 8.89)
+					(end 6.35 -8.89)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+			)
+			(symbol "Photo_Interrupter_1_1"
+				(pin passive line
+					(at 8.89 5.08 180)
+					(length 2.54)
+					(name "VCC"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 8.89 0 180)
+					(length 2.54)
+					(name "GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 8.89 -5.08 180)
+					(length 2.54)
+					(name "DO"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "solar_car:R"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "R"
+				(at 3.81 1.27 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "R"
+				(at 3.81 -1.27 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Resistor"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "R_0_1"
+				(rectangle
+					(start -1.02 2.54)
+					(end 1.02 -2.54)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "R_1_1"
+				(pin passive line
+					(at 0 5.08 270)
+					(length 2.54)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -5.08 90)
+					(length 2.54)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "solar_car:XL4015_Module"
+			(pin_names
+				(offset 1.016)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "U"
+				(at -7.62 5.08 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "XL4015_Module"
+				(at -7.62 -10.16 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "XL4015 5 A adjustable buck converter module"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "XL4015_Module_0_1"
+				(rectangle
+					(start -7.62 3.81)
+					(end 7.62 -8.89)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+			)
+			(symbol "XL4015_Module_1_1"
+				(pin passive line
+					(at -10.16 0 0)
+					(length 2.54)
+					(name "IN+"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -10.16 -5.08 0)
+					(length 2.54)
+					(name "IN-"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 10.16 0 180)
+					(length 2.54)
+					(name "OUT+"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 10.16 -5.08 180)
+					(length 2.54)
+					(name "OUT-"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+	)
+	(junction
+		(at 142.24 92.71)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "12c109e6-ef9e-41e6-aa0c-230fbcd9effc")
+	)
+	(junction
+		(at 142.24 177.8)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "1451e1f3-b317-4ee2-b557-0b80512c894f")
+	)
+	(junction
+		(at 142.24 134.62)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "3e74ce1f-ccb6-4cd4-a5bd-e006d5a588b2")
+	)
+	(junction
+		(at 144.78 46.99)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "e3532106-83a4-4a0c-b63e-5d50cf100313")
+	)
+	(no_connect
+		(at 220.24 84.52)
+		(uuid "266018b4-c54f-45e9-b5c7-3b6a8a3bc975")
+	)
+	(no_connect
+		(at 220.24 140.4)
+		(uuid "285a28e1-ed8a-4909-bfa2-c684c7aa3a31")
+	)
+	(no_connect
+		(at 189.76 145.48)
+		(uuid "38e6be1a-79b9-437a-9303-34202ddc0f3e")
+	)
+	(no_connect
+		(at 220.24 89.6)
+		(uuid "416c7f8e-fe23-4e21-9f18-64bf6589b2eb")
+	)
+	(no_connect
+		(at 189.76 130.24)
+		(uuid "43da1f83-7fb4-4a26-9964-c7ac750cf82d")
+	)
+	(no_connect
+		(at 220.24 155.64)
+		(uuid "45433bae-9387-4e5b-87f4-64d4af329b51")
+	)
+	(no_connect
+		(at 220.24 135.32)
+		(uuid "7a305954-6cdd-4590-9e2a-085c7ee1f657")
+	)
+	(no_connect
+		(at 220.24 160.72)
+		(uuid "85221da0-b9cc-4264-a018-52226bfdbb19")
+	)
+	(no_connect
+		(at 189.76 84.52)
+		(uuid "8e3ec61f-fd90-487b-aaf7-7a051c43bacf")
+	)
+	(no_connect
+		(at 220.24 150.56)
+		(uuid "90b35489-d2f7-46a0-b383-5d83e7569c82")
+	)
+	(no_connect
+		(at 189.76 79.44)
+		(uuid "91ea5dd3-c8ea-4328-879c-283420775c9c")
+	)
+	(no_connect
+		(at 189.76 150.56)
+		(uuid "933a4ff4-02b1-4789-8d8b-2d0733bc57f3")
+	)
+	(no_connect
+		(at 189.76 155.64)
+		(uuid "a197f21a-c087-4cce-8c8b-6ff7ef1b338e")
+	)
+	(no_connect
+		(at 220.24 145.48)
+		(uuid "b3655d23-f9c1-4c71-9bee-8394b0f867aa")
+	)
+	(no_connect
+		(at 189.76 74.36)
+		(uuid "dbd519ab-1883-4cda-9332-59f428adc960")
+	)
+	(no_connect
+		(at 189.76 104.84)
+		(uuid "fc13a1e3-5af1-4835-b293-0c49a6b2c2d8")
+	)
+	(wire
+		(pts
+			(xy 113.03 134.62) (xy 118.11 134.62)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "045fdb1c-20cf-437b-a5d1-559043fce51a")
+	)
+	(wire
+		(pts
+			(xy 189.76 89.6) (xy 184.68 89.6)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "04af382b-74b9-4503-bbd5-426760a46ccd")
+	)
+	(wire
+		(pts
+			(xy 256.54 69.85) (xy 251.46 69.85)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "06d982c2-c9b5-45c6-90f9-79f46efbf1f9")
+	)
+	(wire
+		(pts
+			(xy 256.54 64.77) (xy 251.46 64.77)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "072f33b2-a1bb-47a9-a57f-806e6533efa2")
+	)
+	(wire
+		(pts
+			(xy 189.76 109.92) (xy 184.68 109.92)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0824d428-09b5-45a4-9ecc-34e3adb6e7a9")
+	)
+	(wire
+		(pts
+			(xy 303.53 95.25) (xy 303.53 100.33)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "08769543-cb09-4a2c-a10b-918a45daf4d7")
+	)
+	(wire
+		(pts
+			(xy 113.03 74.93) (xy 118.11 74.93)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "09ab4454-5949-41b1-9be6-734d0172a700")
+	)
+	(wire
+		(pts
+			(xy 142.24 147.32) (xy 142.24 148.59)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0acd2dd5-3672-4944-b3fe-f1db9dec395e")
+	)
+	(wire
+		(pts
+			(xy 142.24 120.65) (xy 142.24 118.11)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0e854d03-e7ca-4b8e-bf6c-0f6185896018")
+	)
+	(wire
+		(pts
+			(xy 189.76 99.76) (xy 184.68 99.76)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "11fa7beb-3672-468b-baac-6d268549f3c6")
+	)
+	(wire
+		(pts
+			(xy 260.35 115.57) (xy 255.27 115.57)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "128d0f0e-b6ad-48d7-8fe1-9eed9d25dc82")
+	)
+	(wire
+		(pts
+			(xy 144.78 58.42) (xy 144.78 57.15)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "13719123-a7f9-46fd-89ad-ad94a2ced5fc")
+	)
+	(wire
+		(pts
+			(xy 260.35 105.41) (xy 255.27 105.41)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "16846cc2-d824-4f75-86e7-79c0d70010c6")
+	)
+	(wire
+		(pts
+			(xy 113.03 166.37) (xy 118.11 166.37)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1eaa3439-2583-48bd-a4e6-ff3dd6ff9820")
+	)
+	(wire
+		(pts
+			(xy 220.24 115) (xy 225.32 115)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2650640a-4623-4e1f-bc57-46c3b869a219")
+	)
+	(wire
+		(pts
+			(xy 142.24 80.01) (xy 142.24 74.93)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "27afdd85-c433-4820-b1b8-95f15d88d41e")
+	)
+	(wire
+		(pts
+			(xy 234.95 196.85) (xy 240.03 196.85)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "29c52069-b462-4237-951c-e3e37f380a71")
+	)
+	(wire
+		(pts
+			(xy 276.86 35.56) (xy 281.94 35.56)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2dcb7746-71d8-42e0-8377-93241e416656")
+	)
+	(wire
+		(pts
+			(xy 280.67 105.41) (xy 285.75 105.41)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2dd80250-2830-4a28-82f0-f97dc9fd23ee")
+	)
+	(wire
+		(pts
+			(xy 260.35 156.21) (xy 255.27 156.21)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2f18c893-faa3-41db-b378-33e8cc34c397")
+	)
+	(wire
+		(pts
+			(xy 142.24 190.5) (xy 142.24 195.58)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "387b783b-35b4-4eae-8129-73a963594dae")
+	)
+	(wire
+		(pts
+			(xy 142.24 130.81) (xy 142.24 134.62)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "39d9254b-fd52-4da0-ad3f-57c83438a0ce")
+	)
+	(wire
+		(pts
+			(xy 220.24 104.84) (xy 225.32 104.84)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3d90e505-84c1-4d27-b3eb-a70ca1b038a9")
+	)
+	(wire
+		(pts
+			(xy 189.76 69.28) (xy 184.68 69.28)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3e8e6cae-05d8-40fe-83f7-661ac12f0dae")
+	)
+	(wire
+		(pts
+			(xy 113.03 39.37) (xy 118.11 39.37)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "417bb062-6c48-43cf-9b82-e30ec9e17ee5")
+	)
+	(wire
+		(pts
+			(xy 113.03 80.01) (xy 118.11 80.01)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4dd45359-6bbe-4438-9404-610aa7a33518")
+	)
+	(wire
+		(pts
+			(xy 142.24 175.26) (xy 142.24 177.8)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "50f4f082-4df9-46c7-8e49-f463f6ee6a17")
+	)
+	(wire
+		(pts
+			(xy 256.54 40.64) (xy 251.46 40.64)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "524dfc97-955b-444e-8589-69d525eff47a")
+	)
+	(wire
+		(pts
+			(xy 144.78 36.83) (xy 144.78 31.75)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5697f2e1-ef7c-4a2c-b6fe-51b38720ad91")
+	)
+	(wire
+		(pts
+			(xy 113.03 176.53) (xy 118.11 176.53)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5748cf5b-5ec1-4f75-b550-39fcc364e72f")
+	)
+	(wire
+		(pts
+			(xy 148.59 134.62) (xy 142.24 134.62)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5963b98b-5c70-4eee-97b6-bc5aeeecbe22")
+	)
+	(wire
+		(pts
+			(xy 189.76 115) (xy 184.68 115)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5d2e30af-1a75-45a3-9163-6382e10fc8a2")
+	)
+	(wire
+		(pts
+			(xy 113.03 90.17) (xy 118.11 90.17)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5d4b5bec-7faa-4980-95c8-ed6b54a76c22")
+	)
+	(wire
+		(pts
+			(xy 191.77 186.69) (xy 196.85 186.69)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "629cac0f-d237-40ad-96ab-765fb0a8b928")
+	)
+	(wire
+		(pts
+			(xy 189.76 120.08) (xy 184.68 120.08)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "68132b93-9225-4286-9eb4-e81313ff2594")
+	)
+	(wire
+		(pts
+			(xy 148.59 177.8) (xy 142.24 177.8)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "71c04130-9eef-4329-bd54-a8d27dd084c2")
+	)
+	(wire
+		(pts
+			(xy 280.67 100.33) (xy 285.75 100.33)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "77eb0c90-4f62-423a-bb0e-ee6e24464e81")
+	)
+	(wire
+		(pts
+			(xy 220.24 69.28) (xy 225.32 69.28)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "79291d63-f082-4a55-abcb-07802d4c8051")
+	)
+	(wire
+		(pts
+			(xy 260.35 146.05) (xy 255.27 146.05)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "79dad177-455d-4352-83a5-cc8893ea0942")
+	)
+	(wire
+		(pts
+			(xy 256.54 35.56) (xy 251.46 35.56)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7a3eb7dc-58ca-49b2-8713-e404cdda6171")
+	)
+	(wire
+		(pts
+			(xy 113.03 49.53) (xy 118.11 49.53)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7a405990-cd27-4a39-9227-3be1ffce9bce")
+	)
+	(wire
+		(pts
+			(xy 220.24 79.44) (xy 225.32 79.44)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7b5540d9-2254-4776-84ab-a12affc8aa85")
+	)
+	(wire
+		(pts
+			(xy 333.53 95.25) (xy 333.53 100.33)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7bb3e584-3773-458e-8986-3ccf488c507d")
+	)
+	(wire
+		(pts
+			(xy 276.86 69.85) (xy 281.94 69.85)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7f0036fe-cec3-4c51-98ac-210be6291b9f")
+	)
+	(wire
+		(pts
+			(xy 302.26 125.73) (xy 302.26 120.65)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8243773a-e4fb-4ea3-8bb8-1cc4c0b24e35")
+	)
+	(wire
+		(pts
+			(xy 220.24 74.36) (xy 225.32 74.36)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "83f5ed71-5e7b-41a5-a8a3-55306d02bec3")
+	)
+	(wire
+		(pts
+			(xy 332.26 135.89) (xy 332.26 140.97)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8594b4a6-dde2-4c5a-96ce-4148346feeab")
+	)
+	(wire
+		(pts
+			(xy 191.77 191.77) (xy 196.85 191.77)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "86a09775-e4f9-4ec5-818c-7712e3756096")
+	)
+	(wire
+		(pts
+			(xy 189.76 160.72) (xy 184.68 160.72)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "88f86dae-1add-4c51-ab44-d67b5fb45018")
+	)
+	(wire
+		(pts
+			(xy 142.24 134.62) (xy 142.24 137.16)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8cb7aa72-d96b-486b-a67b-a27c3a0a1574")
+	)
+	(wire
+		(pts
+			(xy 113.03 119.38) (xy 118.11 119.38)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9280cbd6-f236-4d97-91cb-c91e646d0b94")
+	)
+	(wire
+		(pts
+			(xy 142.24 102.87) (xy 142.24 105.41)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "98360ef6-e407-476e-854a-e74259a834d5")
+	)
+	(wire
+		(pts
+			(xy 234.95 186.69) (xy 240.03 186.69)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "99a1c7e9-4773-46ee-9926-980a897fae91")
+	)
+	(wire
+		(pts
+			(xy 276.86 40.64) (xy 281.94 40.64)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a3846e14-59e9-4a6f-8f43-7102bbfd1f31")
+	)
+	(wire
+		(pts
+			(xy 113.03 85.09) (xy 118.11 85.09)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a513503b-3f62-4516-9374-29a4e9d86c71")
+	)
+	(wire
+		(pts
+			(xy 332.26 125.73) (xy 332.26 120.65)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a876bac3-af52-49e5-9ed3-1a312462673c")
+	)
+	(wire
+		(pts
+			(xy 189.76 125.16) (xy 184.68 125.16)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a8ab1760-25f9-4cf6-92e4-e6f0aa3e23c9")
+	)
+	(wire
+		(pts
+			(xy 113.03 181.61) (xy 118.11 181.61)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ab940ee5-5bf3-4823-a356-2a8a6200d187")
+	)
+	(wire
+		(pts
+			(xy 220.24 94.68) (xy 225.32 94.68)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b1180885-ba35-45f0-85d3-32d406034b2b")
+	)
+	(wire
+		(pts
+			(xy 144.78 46.99) (xy 157.48 46.99)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b185a3cf-4104-4fd3-9a04-ae9731cc19ca")
+	)
+	(wire
+		(pts
+			(xy 113.03 34.29) (xy 118.11 34.29)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b1dbc1a3-a025-4415-84a4-288d388576e9")
+	)
+	(wire
+		(pts
+			(xy 113.03 171.45) (xy 118.11 171.45)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b36db649-d411-4694-b18f-4f2c46d05768")
+	)
+	(wire
+		(pts
+			(xy 280.67 140.97) (xy 285.75 140.97)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b986ed37-d109-4e69-8a8d-444d2d4f73fb")
+	)
+	(wire
+		(pts
+			(xy 280.67 146.05) (xy 285.75 146.05)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c18f4a69-4b50-4c9a-8ef4-d00e9b03f7f7")
+	)
+	(wire
+		(pts
+			(xy 333.53 85.09) (xy 333.53 80.01)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c2fc9ce7-9432-42d2-9317-2caa5f6824a2")
+	)
+	(wire
+		(pts
+			(xy 189.76 94.68) (xy 184.68 94.68)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c64a657e-a354-4f8b-a737-3210a9722c20")
+	)
+	(wire
+		(pts
+			(xy 260.35 110.49) (xy 255.27 110.49)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c6e0b99c-612d-4496-8f3d-4cafc3e29d3f")
+	)
+	(wire
+		(pts
+			(xy 113.03 124.46) (xy 118.11 124.46)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c79f962b-0c6f-4583-bd6e-8e349a56081f")
+	)
+	(wire
+		(pts
+			(xy 234.95 191.77) (xy 240.03 191.77)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c8b8bf57-6c17-4def-a27d-d60bcded66a1")
+	)
+	(wire
+		(pts
+			(xy 260.35 100.33) (xy 255.27 100.33)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c8ed5310-e30d-49df-b8f0-cc946bf0f79a")
+	)
+	(wire
+		(pts
+			(xy 303.53 85.09) (xy 303.53 80.01)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c9959585-4df4-44f4-bf93-66953c6c046b")
+	)
+	(wire
+		(pts
+			(xy 142.24 90.17) (xy 142.24 92.71)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c9abb6e3-0a9b-4b1e-8c4f-74db1b1c2d92")
+	)
+	(wire
+		(pts
+			(xy 276.86 64.77) (xy 281.94 64.77)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c9bc7a02-3bda-4e01-afac-0c068eb180d3")
+	)
+	(wire
+		(pts
+			(xy 189.76 135.32) (xy 184.68 135.32)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c9daa3de-2065-400c-bbe3-42f8ca0ba602")
+	)
+	(wire
+		(pts
+			(xy 113.03 129.54) (xy 118.11 129.54)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d087190d-5971-4cf6-a7ef-f50a890f86a1")
+	)
+	(wire
+		(pts
+			(xy 302.26 135.89) (xy 302.26 140.97)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d3cd7b5d-a3d7-4761-986a-3dc9f2bb4dff")
+	)
+	(wire
+		(pts
+			(xy 144.78 48.26) (xy 144.78 46.99)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d40f83ee-1d3d-40b4-be9b-b82e56621d7d")
+	)
+	(wire
+		(pts
+			(xy 220.24 109.92) (xy 225.32 109.92)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d6b028cb-3537-4267-81cf-dc736b22f8cd")
+	)
+	(wire
+		(pts
+			(xy 191.77 196.85) (xy 196.85 196.85)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "dc96c953-f6b9-4875-88d4-0378fe1fccd8")
+	)
+	(wire
+		(pts
+			(xy 220.24 125.16) (xy 225.32 125.16)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e4005949-9fb9-4b80-bdfd-47fa67da1343")
+	)
+	(wire
+		(pts
+			(xy 189.76 140.4) (xy 184.68 140.4)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e45982df-1e57-4ed1-93e4-ed0f97908058")
+	)
+	(wire
+		(pts
+			(xy 260.35 151.13) (xy 255.27 151.13)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e5961ac0-9673-47e7-9229-ca13a5d99e23")
+	)
+	(wire
+		(pts
+			(xy 220.24 130.24) (xy 225.32 130.24)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e647ab40-bf47-4cdc-a167-9ceef14e3c95")
+	)
+	(wire
+		(pts
+			(xy 148.59 92.71) (xy 142.24 92.71)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e68869c4-a345-4a8f-af2b-f9ce9b32d5cd")
+	)
+	(wire
+		(pts
+			(xy 142.24 177.8) (xy 142.24 180.34)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e7c018f9-056b-4194-abeb-ff80f86ee7ec")
+	)
+	(wire
+		(pts
+			(xy 113.03 44.45) (xy 118.11 44.45)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e86adc48-f919-4655-a667-7a6a0d7dec03")
+	)
+	(wire
+		(pts
+			(xy 142.24 165.1) (xy 142.24 160.02)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "eb0cfdc0-59f4-45cf-a5a4-0888f1c74f59")
+	)
+	(wire
+		(pts
+			(xy 220.24 120.08) (xy 225.32 120.08)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "eb691da4-de64-46f8-a0c4-f62f8acc3c8b")
+	)
+	(wire
+		(pts
+			(xy 220.24 99.76) (xy 225.32 99.76)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ebe3d231-796d-4c7c-ab69-d7c8a06e1bd7")
+	)
+	(wire
+		(pts
+			(xy 260.35 140.97) (xy 255.27 140.97)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f482d251-b6db-4aac-b413-ab3f3cea03b4")
+	)
+	(label "US3_ECHO"
+		(at 148.59 134.62 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "00beeb28-7831-490b-a3d2-ee3a5e2037c4")
+	)
+	(label "MR_B"
+		(at 302.26 140.97 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "0563759d-c5a3-4b14-809e-b8c42d656337")
+	)
+	(label "US3_TRIG"
+		(at 225.32 125.16 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "0fedfeec-1691-4d11-8ada-c00f99782e7d")
+	)
+	(label "US4_ECHO5V"
+		(at 118.11 176.53 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "141f67a8-fa11-456e-aac4-b72531a2e380")
+	)
+	(label "ML_A"
+		(at 285.75 100.33 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "2313c6b6-2dd7-4aa8-bb89-41fc7d68630a")
+	)
+	(label "ML_B"
+		(at 333.53 100.33 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "2b43acca-f013-42ba-9a59-7f7736b846f5")
+	)
+	(label "MOT_R_IN1"
+		(at 184.68 120.08 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "3110c1b6-fa08-482c-a79b-48588f1758af")
+	)
+	(label "MR_A"
+		(at 302.26 120.65 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "3559e7db-f843-494d-a29a-925d9d4aea02")
+	)
+	(label "ML_B"
+		(at 303.53 100.33 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "3a41b971-8c18-45f7-9eff-5b84d4543351")
+	)
+	(label "US4_TRIG"
+		(at 225.32 130.24 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "3e943b5c-8f52-44a9-a049-b9cc817dc975")
+	)
+	(label "US3_TRIG"
+		(at 118.11 124.46 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "3f655a1a-c008-40f0-95e1-fe00b0980758")
+	)
+	(label "MR_B"
+		(at 285.75 146.05 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "40d291bb-0ddf-4205-acf5-764ae243cb40")
+	)
+	(label "SPD_L"
+		(at 184.68 89.6 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "428149f4-7c74-40de-ba36-6fac68ffaaf4")
+	)
+	(label "MR_A"
+		(at 332.26 120.65 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "44260607-4435-4a04-bcb7-81e85f9035c8")
+	)
+	(label "US2_ECHO"
+		(at 148.59 92.71 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "4cd6cd3e-f131-4cd4-8897-b8dc59057810")
+	)
+	(label "MR_A"
+		(at 285.75 140.97 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "50426ecd-1338-46d1-983c-363bcc59f039")
+	)
+	(label "MOT_L_IN1"
+		(at 255.27 110.49 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "54a50d13-9685-4e8c-a38f-10b0404fe1dd")
+	)
+	(label "US1_ECHO5V"
+		(at 118.11 44.45 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "55a349d5-b23b-43d3-812d-8c92ee2ef7dc")
+	)
+	(label "US1_TRIG"
+		(at 225.32 115 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "5ebabcd7-58ec-4d4e-8a75-483128f061d8")
+	)
+	(label "US4_ECHO"
+		(at 148.59 177.8 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "60a6efc9-0f6d-4007-9311-86ab8361cc47")
+	)
+	(label "US3_ECHO5V"
+		(at 142.24 118.11 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "63457650-af0d-4791-9d98-2ee95d021457")
+	)
+	(label "ML_A"
+		(at 333.53 80.01 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "6f29e81f-8139-4d81-baa0-55e6832b19cb")
+	)
+	(label "MOT_R_IN2"
+		(at 255.27 156.21 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "71b5ac3a-c0d9-48d2-850e-659f2f09c919")
+	)
+	(label "US2_ECHO"
+		(at 225.32 104.84 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "73de6822-33bc-4a76-85cd-a824cde97bb9")
+	)
+	(label "MOT_L_IN2"
+		(at 184.68 115 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "8ac9e897-c323-4d34-9bb8-a384d41ea49a")
+	)
+	(label "SPD_R"
+		(at 184.68 94.68 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "8da19447-4091-4dc9-88db-28f226070278")
+	)
+	(label "SPD_R"
+		(at 240.03 196.85 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "8e5e7e0c-1038-4b44-8970-849c1ac78258")
+	)
+	(label "MOT_R_IN1"
+		(at 255.27 151.13 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "9008668b-6f86-455f-9d1f-438d6f8638dc")
+	)
+	(label "US2_TRIG"
+		(at 225.32 120.08 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "945f403e-becd-4132-ac3f-0cf0175b9453")
+	)
+	(label "US1_ECHO"
+		(at 225.32 109.92 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "9ab690f7-0dbf-445d-b589-8557d5ebbb83")
+	)
+	(label "US1_ECHO5V"
+		(at 144.78 31.75 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "9e5f0f09-2171-4420-8ec5-2c911c9dba25")
+	)
+	(label "MOT_L_IN1"
+		(at 184.68 109.92 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "a542cf18-442d-4b73-bb4b-217bde937e6f")
+	)
+	(label "US2_ECHO5V"
+		(at 118.11 85.09 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "a966e417-cce5-4e5d-84ae-ba08bc19bd64")
+	)
+	(label "US1_TRIG"
+		(at 118.11 39.37 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "b8062ef3-55d4-4aa4-b07f-915d84323429")
+	)
+	(label "MR_B"
+		(at 332.26 140.97 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "be365adf-5745-4190-a068-be1b774dfae0")
+	)
+	(label "US4_TRIG"
+		(at 118.11 171.45 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "c19ab41c-2854-4561-b585-20d98fa5ff78")
+	)
+	(label "US1_ECHO"
+		(at 157.48 46.99 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "cc0d5151-1628-42c7-982b-d32ed3feea4f")
+	)
+	(label "MOT_L_IN2"
+		(at 255.27 115.57 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "cea1d9e2-b32c-4a3f-8446-a6cbd01b0014")
+	)
+	(label "US3_ECHO5V"
+		(at 118.11 129.54 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "d98566b0-d586-41d9-9999-bdbb7e6e0099")
+	)
+	(label "US4_ECHO5V"
+		(at 142.24 160.02 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "dc9d6945-ab4a-4876-8417-a31fd5125ca8")
+	)
+	(label "SPD_L"
+		(at 196.85 196.85 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "df47f70f-c701-4220-bcf6-450079d47846")
+	)
+	(label "ML_B"
+		(at 285.75 105.41 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "e50ca1bf-658b-4e9a-b508-a6fd03deabf5")
+	)
+	(label "MOT_R_IN2"
+		(at 184.68 125.16 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "e7eaa81c-08d1-40c0-b8e6-4c0a53a7498f")
+	)
+	(label "US2_TRIG"
+		(at 118.11 80.01 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "eaf98219-ee86-4e1a-9ae1-da0917a31b6d")
+	)
+	(label "US3_ECHO"
+		(at 225.32 74.36 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "eb56c7d0-49d9-45bf-8ea4-64aed50bc240")
+	)
+	(label "ML_A"
+		(at 303.53 80.01 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "f1abfc34-626d-4983-8604-95eb30ec2b6a")
+	)
+	(label "US2_ECHO5V"
+		(at 142.24 74.93 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "f45669d9-a7e9-4aa2-bb74-0768866e69f4")
+	)
+	(label "US4_ECHO"
+		(at 184.68 140.4 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "fec50d76-6142-4095-aeab-a596a6707f06")
+	)
+	(global_label "MOVING"
+		(shape passive)
+		(at 184.68 99.76 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "41be0590-5313-414f-9c50-ebc1f75a1032")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 184.68 99.76 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "I2C_SDA"
+		(shape passive)
+		(at 225.32 94.68 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "a9281c54-d652-4352-98e2-74f9d6a14dff")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 225.32 94.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "I2C_SCL"
+		(shape passive)
+		(at 225.32 79.44 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "d6037c20-d372-42f2-9f96-ff3dc58ec67a")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 225.32 79.44 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+	)
+	(symbol
+		(lib_id "solar_car:R")
+		(at 142.24 125.73 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "01a7f15e-494f-42af-ae43-a7d0d4f6b73e")
+		(property "Reference" "R5"
+			(at 146.05 124.46 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "2.2k"
+			(at 146.05 127 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 142.24 125.73 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 142.24 125.73 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 142.24 125.73 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "939053c2-855c-4341-82f6-d537a8a87cb6")
+		)
+		(pin "2"
+			(uuid "e11bdb4e-3631-40b4-bb50-c4d76ca8d4d7")
+		)
+		(instances
+			(project "solar_car"
+				(path "/73687530-58af-4e95-a981-bfe8cd8933bd/fef8766d-1756-4973-85af-765f0f491c0a"
+					(reference "R5")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "solar_car:PWR_PVMOT")
+		(at 255.27 100.33 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "0a8eb9e0-3a92-423b-83d6-db923179c132")
+		(property "Reference" "#PWR046"
+			(at 255.27 100.33 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "VM"
+			(at 251.71 100.33 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 255.27 100.33 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 255.27 100.33 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 255.27 100.33 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "aeb0590e-6ea6-4668-865e-3bf08bf528c5")
+		)
+		(instances
+			(project "solar_car"
+				(path "/73687530-58af-4e95-a981-bfe8cd8933bd/fef8766d-1756-4973-85af-765f0f491c0a"
+					(reference "#PWR046")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "solar_car:Motor_DC")
+		(at 333.53 90.17 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "124de788-7060-49bb-b29f-31d733eac109")
+		(property "Reference" "M2"
+			(at 337.34 88.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "TT rear-left"
+			(at 337.34 91.44 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 333.53 90.17 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 333.53 90.17 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 333.53 90.17 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "88d50536-6a81-4cb7-82e4-374f1e32ebad")
+		)
+		(pin "2"
+			(uuid "7799cfff-a378-408d-9a9e-1cd4e9ce5755")
+		)
+		(instances
+			(project "solar_car"
+				(path "/73687530-58af-4e95-a981-bfe8cd8933bd/fef8766d-1756-4973-85af-765f0f491c0a"
+					(reference "M2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "solar_car:PWR_GND")
+		(at 142.24 105.41 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "18d9b739-1a8a-4413-b657-1a8ffc9836b3")
+		(property "Reference" "#PWR031"
+			(at 142.24 105.41 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 142.24 109.22 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 142.24 105.41 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 142.24 105.41 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 142.24 105.41 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "f9cffecd-9566-4662-8ad0-0b873447847e")
+		)
+		(instances
+			(project "solar_car"
+				(path "/73687530-58af-4e95-a981-bfe8cd8933bd/fef8766d-1756-4973-85af-765f0f491c0a"
+					(reference "#PWR031")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "solar_car:PWR_P3V3")
+		(at 240.03 186.69 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "1a7edd9e-3dda-4499-be3a-6935809b1eea")
+		(property "Reference" "#PWR052"
+			(at 240.03 186.69 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+3V3"
+			(at 243.59 186.69 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 240.03 186.69 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 240.03 186.69 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 240.03 186.69 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "cc288007-da40-47c1-8c91-a688028b8452")
+		)
+		(instances
+			(project "solar_car"
+				(path "/73687530-58af-4e95-a981-bfe8cd8933bd/fef8766d-1756-4973-85af-765f0f491c0a"
+					(reference "#PWR052")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "solar_car:ESP32_DEV_38P")
+		(at 205 115 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "210cfe45-f60e-4e2d-9610-30e98653f8a7")
+		(property "Reference" "U1"
+			(at 192.3 64.2 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "ESP32-DEV-38P"
+			(at 192.3 165.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 205 115 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 205 115 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 205 115 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "2b327fd8-7f85-4d22-8c25-91a37ec1e7d8")
+		)
+		(pin "2"
+			(uuid "395e356b-efad-438d-b604-f991a5bfff3c")
+		)
+		(pin "3"
+			(uuid "a231eef1-ab5a-4023-acf0-3da090cc6e2d")
+		)
+		(pin "4"
+			(uuid "3fcd1487-897f-4b97-a55f-7c35a79bf4ed")
+		)
+		(pin "5"
+			(uuid "796301d3-ea41-4fd7-bd49-b8c49fbbb68b")
+		)
+		(pin "6"
+			(uuid "6df682f9-42ad-4732-a4e0-689eaaa982b6")
+		)
+		(pin "7"
+			(uuid "2d7459e0-a7c9-46b1-80ab-db2a5a199e1f")
+		)
+		(pin "8"
+			(uuid "a28f27a9-5e80-4b61-a165-044aff294688")
+		)
+		(pin "9"
+			(uuid "4d21e88f-90f1-4a23-8e25-df34759fa170")
+		)
+		(pin "10"
+			(uuid "ffb83e32-ca22-4854-af5a-bd812bb5f0db")
+		)
+		(pin "11"
+			(uuid "504de699-87fa-4eae-bf58-2b536e3aafb7")
+		)
+		(pin "12"
+			(uuid "5529b2a5-0483-44fe-95bb-5181480f2b61")
+		)
+		(pin "13"
+			(uuid "8dbe21c7-54ea-403b-826b-4494be379a5d")
+		)
+		(pin "14"
+			(uuid "af789ffc-c521-4ef0-977a-936e9eb81837")
+		)
+		(pin "15"
+			(uuid "a639e162-1fe9-4504-989a-e5d156376c78")
+		)
+		(pin "16"
+			(uuid "a93a9a39-8fb6-402a-96e4-352d2bf83d28")
+		)
+		(pin "17"
+			(uuid "5565135d-8aa6-4b37-8a0c-44960e7fd58b")
+		)
+		(pin "18"
+			(uuid "d90bfb58-101b-4c34-88e4-221f6a291776")
+		)
+		(pin "19"
+			(uuid "8e2a88ef-eb41-40f4-9d86-baa2fdeedc6f")
+		)
+		(pin "38"
+			(uuid "1148eb16-f2cc-41bd-8722-e55ecf8b9237")
+		)
+		(pin "37"
+			(uuid "216bc75c-8b70-4ebb-88b5-89ccc571f50e")
+		)
+		(pin "36"
+			(uuid "97e9aab8-3dba-40c8-8f5c-66289b217b74")
+		)
+		(pin "35"
+			(uuid "53df8c4c-dd95-4e47-94d6-7c05c9b1c336")
+		)
+		(pin "34"
+			(uuid "589f779c-424e-4f64-ab99-9410a4e3a5b6")
+		)
+		(pin "33"
+			(uuid "1a676633-da9c-4dde-8c18-690cfbbd402b")
+		)
+		(pin "32"
+			(uuid "82d2a117-2157-4a1e-8573-aaa2d1dbee5b")
+		)
+		(pin "31"
+			(uuid "418c62a2-5454-4fff-a9f1-2b784beee083")
+		)
+		(pin "30"
+			(uuid "f15d34d1-0078-41f6-9067-2efcfd17260c")
+		)
+		(pin "29"
+			(uuid "e6eced42-a7ba-4fdc-96d9-5db17e7550d2")
+		)
+		(pin "28"
+			(uuid "871a77b1-573d-4ca8-b129-c90dcf82eded")
+		)
+		(pin "27"
+			(uuid "dbcbc079-b7b9-4d48-bc6e-bdf6ac0c9f0c")
+		)
+		(pin "26"
+			(uuid "7c9965ed-62f8-4cfa-9baa-c9a79b6858ca")
+		)
+		(pin "25"
+			(uuid "25ce500e-7ddb-45be-b6fb-13decab87819")
+		)
+		(pin "24"
+			(uuid "ad834283-af52-4e35-8c68-614518b5d504")
+		)
+		(pin "23"
+			(uuid "1b1addf7-9f18-4e46-9d22-171c220c8e8c")
+		)
+		(pin "22"
+			(uuid "01ae4958-ac3c-4ad2-9867-f955582a465f")
+		)
+		(pin "21"
+			(uuid "0debdfef-363d-4b9d-b350-4bd96147202a")
+		)
+		(pin "20"
+			(uuid "2c37b04d-de62-4fed-88c0-e14e172ac519")
+		)
+		(instances
+			(project "solar_car"
+				(path "/73687530-58af-4e95-a981-bfe8cd8933bd/fef8766d-1756-4973-85af-765f0f491c0a"
+					(reference "U1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "solar_car:PWR_P3V3")
+		(at 196.85 186.69 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "26273118-d94a-443a-8578-8b2f094326c4")
+		(property "Reference" "#PWR050"
+			(at 196.85 186.69 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+3V3"
+			(at 200.41 186.69 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 196.85 186.69 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 196.85 186.69 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 196.85 186.69 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "15747bff-970d-432b-a3eb-c25d2763cf17")
+		)
+		(instances
+			(project "solar_car"
+				(path "/73687530-58af-4e95-a981-bfe8cd8933bd/fef8766d-1756-4973-85af-765f0f491c0a"
+					(reference "#PWR050")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "solar_car:HC-SR04")
+		(at 104.14 39.37 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "32cde884-9672-49c4-8a43-f9c902f4f9e9")
+		(property "Reference" "U12"
+			(at 97.79 29.21 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "HC-SR04 Front-left (+30°)"
+			(at 97.79 54.61 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 104.14 39.37 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 104.14 39.37 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 104.14 39.37 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "a1ad4014-ce24-4b77-affe-ecd2663fd114")
+		)
+		(pin "2"
+			(uuid "ae9b8faf-a23f-43f7-820f-6802491789f1")
+		)
+		(pin "3"
+			(uuid "a7fc2d2d-fcd3-4d82-aeb6-f1f0a01b5e83")
+		)
+		(pin "4"
+			(uuid "07b351c7-e61f-4456-8972-32f4a2df9104")
+		)
+		(instances
+			(project "solar_car"
+				(path "/73687530-58af-4e95-a981-bfe8cd8933bd/fef8766d-1756-4973-85af-765f0f491c0a"
+					(reference "U12")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "solar_car:XL4015_Module")
+		(at 266.7 64.77 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "39a87b41-11b0-4bde-b46f-3bd0b02e0fd5")
+		(property "Reference" "U6"
+			(at 259.08 59.69 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "XL4015 -> motors"
+			(at 259.08 74.93 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 266.7 64.77 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 266.7 64.77 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 266.7 64.77 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "1ed8a7d0-0b07-42ad-958e-60ef0cfe55ee")
+		)
+		(pin "2"
+			(uuid "3287db9e-d44b-453c-957c-ca74efbdff62")
+		)
+		(pin "3"
+			(uuid "ab68d266-0b51-429e-a8bc-132f5cbf3ae0")
+		)
+		(pin "4"
+			(uuid "14a65295-498f-4243-8f05-d4c40ce7fdc2")
+		)
+		(instances
+			(project "solar_car"
+				(path "/73687530-58af-4e95-a981-bfe8cd8933bd/fef8766d-1756-4973-85af-765f0f491c0a"
+					(reference "U6")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "solar_car:R")
+		(at 144.78 53.34 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "3f2005bc-7c5f-4461-a1c4-ae9c4e65985f")
+		(property "Reference" "R2"
+			(at 148.59 52.07 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "4.7k"
+			(at 148.59 54.61 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 144.78 53.34 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 144.78 53.34 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 144.78 53.34 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "8c6891ae-e357-49c8-bdf5-be38dd9f7f29")
+		)
+		(pin "2"
+			(uuid "b3c55cf6-8f50-4599-ae18-dcab04e5830a")
+		)
+		(instances
+			(project "solar_car"
+				(path "/73687530-58af-4e95-a981-bfe8cd8933bd/fef8766d-1756-4973-85af-765f0f491c0a"
+					(reference "R2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "solar_car:PWR_GND")
+		(at 144.78 57.15 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "400df798-6fb3-44cb-8b46-307329cb4789")
+		(property "Reference" "#PWR028"
+			(at 144.78 57.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 144.78 60.96 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 144.78 57.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 144.78 57.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 144.78 57.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "95e9aca5-a1b0-4317-a026-61000e18cec1")
+		)
+		(instances
+			(project "solar_car"
+				(path "/73687530-58af-4e95-a981-bfe8cd8933bd/fef8766d-1756-4973-85af-765f0f491c0a"
+					(reference "#PWR028")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "solar_car:PWR_GND")
+		(at 281.94 40.64 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "45e176f3-1009-47a7-8369-22db6997beb4")
+		(property "Reference" "#PWR041"
+			(at 281.94 40.64 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 285.75 40.64 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" ""
+			(at 281.94 40.64 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 281.94 40.64 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 281.94 40.64 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "3810633f-0cd3-4c8e-9ab3-1cc9ac92cd69")
+		)
+		(instances
+			(project "solar_car"
+				(path "/73687530-58af-4e95-a981-bfe8cd8933bd/fef8766d-1756-4973-85af-765f0f491c0a"
+					(reference "#PWR041")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "solar_car:XL4015_Module")
+		(at 266.7 35.56 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "5145a1fc-e137-446f-8f53-312a51e75a4b")
+		(property "Reference" "U5"
+			(at 259.08 30.48 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "XL4015 -> 5.0 V"
+			(at 259.08 45.72 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 266.7 35.56 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 266.7 35.56 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 266.7 35.56 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "1b20596b-5477-4374-89e2-235e7a5a0a7d")
+		)
+		(pin "2"
+			(uuid "e7d9c82e-77c0-48e4-a7d9-12df268a351c")
+		)
+		(pin "3"
+			(uuid "680d43aa-817b-4e57-a87d-72f0aa724ca7")
+		)
+		(pin "4"
+			(uuid "f8dbcf57-7aef-4185-9792-6cdd6bb4212e")
+		)
+		(instances
+			(project "solar_car"
+				(path "/73687530-58af-4e95-a981-bfe8cd8933bd/fef8766d-1756-4973-85af-765f0f491c0a"
+					(reference "U5")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "solar_car:PWR_PVMOT")
+		(at 255.27 140.97 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "55fd0b7e-db14-47ac-a229-1e21c6355926")
+		(property "Reference" "#PWR048"
+			(at 255.27 140.97 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "VM"
+			(at 251.71 140.97 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 255.27 140.97 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 255.27 140.97 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 255.27 140.97 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "27e225ad-42ff-4475-b4e4-4b02fa105b35")
+		)
+		(instances
+			(project "solar_car"
+				(path "/73687530-58af-4e95-a981-bfe8cd8933bd/fef8766d-1756-4973-85af-765f0f491c0a"
+					(reference "#PWR048")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "solar_car:PWR_GND")
+		(at 184.68 135.32 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "5919df30-9eae-45ab-b751-16061e494b5f")
+		(property "Reference" "#PWR022"
+			(at 184.68 135.32 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 180.87 135.32 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" ""
+			(at 184.68 135.32 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 184.68 135.32 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 184.68 135.32 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "efbe5257-4321-4055-af97-99f57807aae9")
+		)
+		(instances
+			(project "solar_car"
+				(path "/73687530-58af-4e95-a981-bfe8cd8933bd/fef8766d-1756-4973-85af-765f0f491c0a"
+					(reference "#PWR022")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "solar_car:PWR_GND")
+		(at 196.85 191.77 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "5b58310a-2ebd-4f14-bfb0-6c1341188f55")
+		(property "Reference" "#PWR051"
+			(at 196.85 191.77 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 200.66 191.77 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" ""
+			(at 196.85 191.77 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 196.85 191.77 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 196.85 191.77 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "ae398ab8-b990-4c9e-9e93-56f8f3b15cde")
+		)
+		(instances
+			(project "solar_car"
+				(path "/73687530-58af-4e95-a981-bfe8cd8933bd/fef8766d-1756-4973-85af-765f0f491c0a"
+					(reference "#PWR051")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "solar_car:PWR_P5V")
+		(at 184.68 160.72 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "5d1f3887-875b-47ca-9b49-e501f419af6e")
+		(property "Reference" "#PWR023"
+			(at 184.68 160.72 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+5V"
+			(at 181.12 160.72 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 184.68 160.72 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 184.68 160.72 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 184.68 160.72 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "245b6be6-2c30-470a-bd74-232742243dca")
+		)
+		(instances
+			(project "solar_car"
+				(path "/73687530-58af-4e95-a981-bfe8cd8933bd/fef8766d-1756-4973-85af-765f0f491c0a"
+					(reference "#PWR023")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "solar_car:PWR_PVMOT")
+		(at 281.94 64.77 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "61a93e6a-3a09-4fb1-af96-7b7b69066d95")
+		(property "Reference" "#PWR044"
+			(at 281.94 64.77 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "VM"
+			(at 285.5 64.77 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 281.94 64.77 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 281.94 64.77 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 281.94 64.77 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "f71db165-f6b7-4856-a6ee-f27da28a51df")
+		)
+		(instances
+			(project "solar_car"
+				(path "/73687530-58af-4e95-a981-bfe8cd8933bd/fef8766d-1756-4973-85af-765f0f491c0a"
+					(reference "#PWR044")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "solar_car:Photo_Interrupter")
+		(at 182.88 191.77 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "637f9782-b037-4fba-8a09-5f7543510a96")
+		(property "Reference" "U16"
+			(at 176.53 181.61 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "Encoder left"
+			(at 176.53 201.93 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 182.88 191.77 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 182.88 191.77 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 182.88 191.77 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "f695634e-abfa-400f-8702-fa1f8e69af37")
+		)
+		(pin "2"
+			(uuid "39031002-a886-43ba-889b-7c8598d45e81")
+		)
+		(pin "3"
+			(uuid "33da306c-0031-4ec4-8fc6-90fdb161f2b8")
+		)
+		(instances
+			(project "solar_car"
+				(path "/73687530-58af-4e95-a981-bfe8cd8933bd/fef8766d-1756-4973-85af-765f0f491c0a"
+					(reference "U16")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "solar_car:PWR_GND")
+		(at 251.46 40.64 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "6d36e685-8668-47b4-a513-32d8717fe59d")
+		(property "Reference" "#PWR039"
+			(at 251.46 40.64 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 247.65 40.64 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" ""
+			(at 251.46 40.64 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 251.46 40.64 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 251.46 40.64 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "9f6880c2-2a0f-4aca-abfb-663b937a4ff5")
+		)
+		(instances
+			(project "solar_car"
+				(path "/73687530-58af-4e95-a981-bfe8cd8933bd/fef8766d-1756-4973-85af-765f0f491c0a"
+					(reference "#PWR039")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "solar_car:Motor_DC")
+		(at 303.53 90.17 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "70ca99ee-3683-4274-98d0-42aa0c449c77")
+		(property "Reference" "M1"
+			(at 307.34 88.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "TT front-left"
+			(at 307.34 91.44 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 303.53 90.17 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 303.53 90.17 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 303.53 90.17 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "4dfa5b1c-999b-4ad3-94f1-e7db43bf9385")
+		)
+		(pin "2"
+			(uuid "6ccf3cb4-0124-43e2-998b-ab639dc6bce4")
+		)
+		(instances
+			(project "solar_car"
+				(path "/73687530-58af-4e95-a981-bfe8cd8933bd/fef8766d-1756-4973-85af-765f0f491c0a"
+					(reference "M1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "solar_car:Photo_Interrupter")
+		(at 226.06 191.77 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "792e6a75-a490-44e1-a95b-051b0cb4739f")
+		(property "Reference" "U17"
+			(at 219.71 181.61 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "Encoder right"
+			(at 219.71 201.93 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 226.06 191.77 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 226.06 191.77 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 226.06 191.77 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "57820bcf-bdcd-4868-9112-31ced0953296")
+		)
+		(pin "2"
+			(uuid "f59bdf3e-82ef-4d08-b914-578fda9cc8aa")
+		)
+		(pin "3"
+			(uuid "393f68ff-ca9f-4a10-9179-d1c28a20d42f")
+		)
+		(instances
+			(project "solar_car"
+				(path "/73687530-58af-4e95-a981-bfe8cd8933bd/fef8766d-1756-4973-85af-765f0f491c0a"
+					(reference "U17")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "solar_car:R")
+		(at 142.24 97.79 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "7a316269-1895-4bc7-9856-7eb7a2059a9c")
+		(property "Reference" "R4"
+			(at 146.05 96.52 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "4.7k"
+			(at 146.05 99.06 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 142.24 97.79 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 142.24 97.79 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 142.24 97.79 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "f6f6ee94-ceea-4697-8225-ada2be259cd0")
+		)
+		(pin "2"
+			(uuid "d334287e-7c31-4fb3-ad0f-e50ee014cd34")
+		)
+		(instances
+			(project "solar_car"
+				(path "/73687530-58af-4e95-a981-bfe8cd8933bd/fef8766d-1756-4973-85af-765f0f491c0a"
+					(reference "R4")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "solar_car:PWR_VSYS")
+		(at 251.46 64.77 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "7b79bcbf-336e-4a0b-aa6c-adf7c95749e0")
+		(property "Reference" "#PWR042"
+			(at 251.46 64.77 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "VSYS"
+			(at 247.9 64.77 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 251.46 64.77 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 251.46 64.77 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 251.46 64.77 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "f0bcad9a-39f6-437d-87a9-57d899a02f7f")
+		)
+		(instances
+			(project "solar_car"
+				(path "/73687530-58af-4e95-a981-bfe8cd8933bd/fef8766d-1756-4973-85af-765f0f491c0a"
+					(reference "#PWR042")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "solar_car:PWR_GND")
+		(at 118.11 134.62 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "8ce08001-cd1b-41f8-acb4-142b882a2736")
+		(property "Reference" "#PWR033"
+			(at 118.11 134.62 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 121.92 134.62 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" ""
+			(at 118.11 134.62 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 118.11 134.62 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 118.11 134.62 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "ef91fe82-6f8c-447f-a5f5-df1e866f2b1f")
+		)
+		(instances
+			(project "solar_car"
+				(path "/73687530-58af-4e95-a981-bfe8cd8933bd/fef8766d-1756-4973-85af-765f0f491c0a"
+					(reference "#PWR033")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "solar_car:PWR_GND")
+		(at 118.11 90.17 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "929c9401-0c0c-4b76-b757-6f1ef76cf3f0")
+		(property "Reference" "#PWR030"
+			(at 118.11 90.17 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 121.92 90.17 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" ""
+			(at 118.11 90.17 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 118.11 90.17 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 118.11 90.17 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "6e75cd15-90e5-4481-a42e-8c1124ba252f")
+		)
+		(instances
+			(project "solar_car"
+				(path "/73687530-58af-4e95-a981-bfe8cd8933bd/fef8766d-1756-4973-85af-765f0f491c0a"
+					(reference "#PWR030")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "solar_car:PWR_GND")
+		(at 142.24 195.58 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "948b9605-4c14-47d2-9e50-d35fca60d490")
+		(property "Reference" "#PWR037"
+			(at 142.24 195.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 142.24 199.39 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 142.24 195.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 142.24 195.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 142.24 195.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "a27629c3-4307-4238-8963-34b7bdbe7676")
+		)
+		(instances
+			(project "solar_car"
+				(path "/73687530-58af-4e95-a981-bfe8cd8933bd/fef8766d-1756-4973-85af-765f0f491c0a"
+					(reference "#PWR037")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "solar_car:PWR_VSYS")
+		(at 251.46 35.56 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "94c03c1d-905d-4683-89ab-6e3c9f16414e")
+		(property "Reference" "#PWR038"
+			(at 251.46 35.56 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "VSYS"
+			(at 247.9 35.56 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 251.46 35.56 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 251.46 35.56 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 251.46 35.56 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "5544ed0e-50f4-4483-8526-f174d82c4fcc")
+		)
+		(instances
+			(project "solar_car"
+				(path "/73687530-58af-4e95-a981-bfe8cd8933bd/fef8766d-1756-4973-85af-765f0f491c0a"
+					(reference "#PWR038")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "solar_car:R")
+		(at 142.24 85.09 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "973cecae-ac66-40c4-b251-d63239da77c5")
+		(property "Reference" "R3"
+			(at 146.05 83.82 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "2.2k"
+			(at 146.05 86.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 142.24 85.09 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 142.24 85.09 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 142.24 85.09 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "72b5e127-4003-429d-bba1-9c3cdb08476f")
+		)
+		(pin "2"
+			(uuid "a329cb9e-a33f-4dfe-979f-cfb8a8ad3c8d")
+		)
+		(instances
+			(project "solar_car"
+				(path "/73687530-58af-4e95-a981-bfe8cd8933bd/fef8766d-1756-4973-85af-765f0f491c0a"
+					(reference "R3")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "solar_car:R")
+		(at 144.78 41.91 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "9df0d855-48f9-430a-a31c-04f2007036b4")
+		(property "Reference" "R1"
+			(at 148.59 40.64 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "2.2k"
+			(at 148.59 43.18 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 144.78 41.91 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 144.78 41.91 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 144.78 41.91 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "e54b7f63-97e6-4b58-8505-70a1f3d40e7b")
+		)
+		(pin "2"
+			(uuid "2413b992-5ccf-4576-9e96-a6e7064ef04b")
+		)
+		(instances
+			(project "solar_car"
+				(path "/73687530-58af-4e95-a981-bfe8cd8933bd/fef8766d-1756-4973-85af-765f0f491c0a"
+					(reference "R1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "solar_car:PWR_GND")
+		(at 240.03 191.77 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "a060f6ad-7651-45b4-933f-b24525c1d917")
+		(property "Reference" "#PWR053"
+			(at 240.03 191.77 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 243.84 191.77 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" ""
+			(at 240.03 191.77 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 240.03 191.77 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 240.03 191.77 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "5766788e-e692-445c-81a4-139efea4dada")
+		)
+		(instances
+			(project "solar_car"
+				(path "/73687530-58af-4e95-a981-bfe8cd8933bd/fef8766d-1756-4973-85af-765f0f491c0a"
+					(reference "#PWR053")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "solar_car:PWR_P5V")
+		(at 281.94 35.56 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "a72debd7-ce44-4239-b9ae-83f39de58f26")
+		(property "Reference" "#PWR040"
+			(at 281.94 35.56 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+5V"
+			(at 285.5 35.56 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 281.94 35.56 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 281.94 35.56 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 281.94 35.56 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "3d9bb27a-b75b-4ace-95a9-8c1bfbcafcb4")
+		)
+		(instances
+			(project "solar_car"
+				(path "/73687530-58af-4e95-a981-bfe8cd8933bd/fef8766d-1756-4973-85af-765f0f491c0a"
+					(reference "#PWR040")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "solar_car:R")
+		(at 142.24 142.24 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "a88fe867-70c9-45ea-8342-23af8bc07230")
+		(property "Reference" "R6"
+			(at 146.05 140.97 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "4.7k"
+			(at 146.05 143.51 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 142.24 142.24 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 142.24 142.24 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 142.24 142.24 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "5cdee810-fe08-4547-bc26-e094b9c2b27d")
+		)
+		(pin "2"
+			(uuid "ba44f408-e0a0-47ff-8875-db8351056ad1")
+		)
+		(instances
+			(project "solar_car"
+				(path "/73687530-58af-4e95-a981-bfe8cd8933bd/fef8766d-1756-4973-85af-765f0f491c0a"
+					(reference "R6")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "solar_car:HC-SR04")
+		(at 104.14 80.01 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "aa2cd615-2819-4cc6-92b9-723731770b80")
+		(property "Reference" "U13"
+			(at 97.79 69.85 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "HC-SR04 Front-centre"
+			(at 97.79 95.25 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 104.14 80.01 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 104.14 80.01 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 104.14 80.01 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "319f091e-e62d-4d48-a8c2-b0de5c1ca84f")
+		)
+		(pin "2"
+			(uuid "31bceb02-ac51-4c73-b779-5726a061f7ae")
+		)
+		(pin "3"
+			(uuid "98acafc9-99be-4a7b-a57d-0cf7ad6f25fd")
+		)
+		(pin "4"
+			(uuid "edf69aca-9435-411a-a200-bf4575849abe")
+		)
+		(instances
+			(project "solar_car"
+				(path "/73687530-58af-4e95-a981-bfe8cd8933bd/fef8766d-1756-4973-85af-765f0f491c0a"
+					(reference "U13")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "solar_car:PWR_GND")
+		(at 251.46 69.85 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "ab45c287-04ba-4d30-92dd-58c865483a06")
+		(property "Reference" "#PWR043"
+			(at 251.46 69.85 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 247.65 69.85 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" ""
+			(at 251.46 69.85 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 251.46 69.85 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 251.46 69.85 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "3900243a-f2d6-4b75-8512-4b5f5f135ecf")
+		)
+		(instances
+			(project "solar_car"
+				(path "/73687530-58af-4e95-a981-bfe8cd8933bd/fef8766d-1756-4973-85af-765f0f491c0a"
+					(reference "#PWR043")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "solar_car:PWR_GND")
+		(at 118.11 49.53 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "ae5b4b39-7ae0-4f58-99ef-3dc20f016951")
+		(property "Reference" "#PWR027"
+			(at 118.11 49.53 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 121.92 49.53 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" ""
+			(at 118.11 49.53 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 118.11 49.53 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 118.11 49.53 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "5292d102-5b6c-4a3c-9aca-63c76af90c88")
+		)
+		(instances
+			(project "solar_car"
+				(path "/73687530-58af-4e95-a981-bfe8cd8933bd/fef8766d-1756-4973-85af-765f0f491c0a"
+					(reference "#PWR027")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "solar_car:PWR_P3V3")
+		(at 184.68 69.28 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "af38e48c-4708-4abc-958d-9dbcbfebd8fa")
+		(property "Reference" "#PWR021"
+			(at 184.68 69.28 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+3V3"
+			(at 181.12 69.28 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 184.68 69.28 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 184.68 69.28 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 184.68 69.28 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "c77932d2-df2e-48d5-8677-d64dcd9fb1a5")
+		)
+		(instances
+			(project "solar_car"
+				(path "/73687530-58af-4e95-a981-bfe8cd8933bd/fef8766d-1756-4973-85af-765f0f491c0a"
+					(reference "#PWR021")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "solar_car:DRV8871_Module")
+		(at 270.51 105.41 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "b6bb752e-572a-4e6d-9a31-f13692fab4ab")
+		(property "Reference" "U3"
+			(at 262.89 95.25 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "DRV8871 left"
+			(at 262.89 120.65 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 270.51 105.41 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 270.51 105.41 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 270.51 105.41 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "6c29bce3-a398-475d-bc69-5d8ff7936340")
+		)
+		(pin "2"
+			(uuid "c89bb613-d0d8-46a1-8a97-d1c117b08971")
+		)
+		(pin "3"
+			(uuid "a66e1b1b-533c-41db-a400-3ffae76afada")
+		)
+		(pin "4"
+			(uuid "fd3c0c03-1c74-4e84-948c-07976ba033fa")
+		)
+		(pin "5"
+			(uuid "18e91d66-103f-4895-ab9c-120efe7e995e")
+		)
+		(pin "6"
+			(uuid "e4d82f88-974f-4759-b8bf-f9995d25be4b")
+		)
+		(instances
+			(project "solar_car"
+				(path "/73687530-58af-4e95-a981-bfe8cd8933bd/fef8766d-1756-4973-85af-765f0f491c0a"
+					(reference "U3")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "solar_car:PWR_GND")
+		(at 225.32 99.76 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "b80345e0-51fc-449d-b409-7ff58cdc9b57")
+		(property "Reference" "#PWR025"
+			(at 225.32 99.76 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 229.13 99.76 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" ""
+			(at 225.32 99.76 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 225.32 99.76 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 225.32 99.76 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "f7abbb1b-5dcb-43d4-8a21-ad25fa17a0af")
+		)
+		(instances
+			(project "solar_car"
+				(path "/73687530-58af-4e95-a981-bfe8cd8933bd/fef8766d-1756-4973-85af-765f0f491c0a"
+					(reference "#PWR025")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "solar_car:R")
+		(at 142.24 170.18 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "c1a06958-0f4d-4a35-b098-e46ef9abc99c")
+		(property "Reference" "R7"
+			(at 146.05 168.91 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "2.2k"
+			(at 146.05 171.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 142.24 170.18 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 142.24 170.18 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 142.24 170.18 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "45656c6f-7d88-4128-baae-6bb3347f7f1b")
+		)
+		(pin "2"
+			(uuid "a4759451-03cd-4d9b-ba2f-3df360d1d04a")
+		)
+		(instances
+			(project "solar_car"
+				(path "/73687530-58af-4e95-a981-bfe8cd8933bd/fef8766d-1756-4973-85af-765f0f491c0a"
+					(reference "R7")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "solar_car:DRV8871_Module")
+		(at 270.51 146.05 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "c26efebf-f596-469c-9c80-8ae4d5f30839")
+		(property "Reference" "U4"
+			(at 262.89 135.89 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "DRV8871 right"
+			(at 262.89 161.29 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 270.51 146.05 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 270.51 146.05 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 270.51 146.05 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "7a03910b-5cb4-4e90-a67a-dd98d7cd64f5")
+		)
+		(pin "2"
+			(uuid "4a65efc4-475c-41e8-9941-7369fdf5a23a")
+		)
+		(pin "3"
+			(uuid "bd01e6fa-515f-4a2b-8018-533c434a32d8")
+		)
+		(pin "4"
+			(uuid "fa799921-d9ca-4bc5-b3a6-9be4cf57e718")
+		)
+		(pin "5"
+			(uuid "2cbd728f-c790-434d-a22a-68ab3d52a0d3")
+		)
+		(pin "6"
+			(uuid "c04f5928-f3d6-4b1e-a683-2a74236fa169")
+		)
+		(instances
+			(project "solar_car"
+				(path "/73687530-58af-4e95-a981-bfe8cd8933bd/fef8766d-1756-4973-85af-765f0f491c0a"
+					(reference "U4")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "solar_car:PWR_P5V")
+		(at 118.11 119.38 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "c8ab82ec-961d-4256-9ec2-615705d42c01")
+		(property "Reference" "#PWR032"
+			(at 118.11 119.38 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+5V"
+			(at 121.67 119.38 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 118.11 119.38 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 118.11 119.38 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 118.11 119.38 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "e3b66a9e-a89c-4cbd-8e01-5f530bf40bb8")
+		)
+		(instances
+			(project "solar_car"
+				(path "/73687530-58af-4e95-a981-bfe8cd8933bd/fef8766d-1756-4973-85af-765f0f491c0a"
+					(reference "#PWR032")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "solar_car:PWR_GND")
+		(at 255.27 105.41 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "ce9b142a-8c36-4cdf-b830-ce13ec42ee17")
+		(property "Reference" "#PWR047"
+			(at 255.27 105.41 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 251.46 105.41 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" ""
+			(at 255.27 105.41 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 255.27 105.41 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 255.27 105.41 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "dad3876a-b4c5-424e-9bd7-6c54c8cab214")
+		)
+		(instances
+			(project "solar_car"
+				(path "/73687530-58af-4e95-a981-bfe8cd8933bd/fef8766d-1756-4973-85af-765f0f491c0a"
+					(reference "#PWR047")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "solar_car:PWR_GND")
+		(at 255.27 146.05 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "d29858b5-e235-42c5-a657-a7368516576f")
+		(property "Reference" "#PWR049"
+			(at 255.27 146.05 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 251.46 146.05 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" ""
+			(at 255.27 146.05 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 255.27 146.05 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 255.27 146.05 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "84e91c96-ea85-480d-adcf-7e3e97b11ca4")
+		)
+		(instances
+			(project "solar_car"
+				(path "/73687530-58af-4e95-a981-bfe8cd8933bd/fef8766d-1756-4973-85af-765f0f491c0a"
+					(reference "#PWR049")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "solar_car:PWR_GND")
+		(at 225.32 69.28 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "d4df7dba-f76a-4044-bab8-37a94d1eb8ee")
+		(property "Reference" "#PWR024"
+			(at 225.32 69.28 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 229.13 69.28 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" ""
+			(at 225.32 69.28 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 225.32 69.28 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 225.32 69.28 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "38bacc38-f341-4648-9598-46c1535cfc5f")
+		)
+		(instances
+			(project "solar_car"
+				(path "/73687530-58af-4e95-a981-bfe8cd8933bd/fef8766d-1756-4973-85af-765f0f491c0a"
+					(reference "#PWR024")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "solar_car:PWR_GND")
+		(at 281.94 69.85 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "d8c5fe03-bccc-4751-a196-18f03adbf903")
+		(property "Reference" "#PWR045"
+			(at 281.94 69.85 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 285.75 69.85 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" ""
+			(at 281.94 69.85 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 281.94 69.85 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 281.94 69.85 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "ab5f19da-4b50-4eca-80b2-ee919748dace")
+		)
+		(instances
+			(project "solar_car"
+				(path "/73687530-58af-4e95-a981-bfe8cd8933bd/fef8766d-1756-4973-85af-765f0f491c0a"
+					(reference "#PWR045")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "solar_car:PWR_P5V")
+		(at 118.11 74.93 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "ddfd122d-2dbb-41a2-b1e2-fb6453c9d203")
+		(property "Reference" "#PWR029"
+			(at 118.11 74.93 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+5V"
+			(at 121.67 74.93 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 118.11 74.93 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 118.11 74.93 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 118.11 74.93 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "f3d5630c-ab67-4965-8d0d-f2e40269595f")
+		)
+		(instances
+			(project "solar_car"
+				(path "/73687530-58af-4e95-a981-bfe8cd8933bd/fef8766d-1756-4973-85af-765f0f491c0a"
+					(reference "#PWR029")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "solar_car:PWR_GND")
+		(at 118.11 181.61 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "de891b03-670d-4eb0-bf27-b1fde4d91b95")
+		(property "Reference" "#PWR036"
+			(at 118.11 181.61 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 121.92 181.61 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" ""
+			(at 118.11 181.61 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 118.11 181.61 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 118.11 181.61 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "971419c0-d137-4fe1-b784-61c75ff5eb9c")
+		)
+		(instances
+			(project "solar_car"
+				(path "/73687530-58af-4e95-a981-bfe8cd8933bd/fef8766d-1756-4973-85af-765f0f491c0a"
+					(reference "#PWR036")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "solar_car:PWR_P5V")
+		(at 118.11 34.29 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "e668f275-2bff-4774-9752-ebcc1dad2435")
+		(property "Reference" "#PWR026"
+			(at 118.11 34.29 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+5V"
+			(at 121.67 34.29 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 118.11 34.29 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 118.11 34.29 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 118.11 34.29 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "99f5c9c1-0d2b-45ab-a71d-c3c19e307b66")
+		)
+		(instances
+			(project "solar_car"
+				(path "/73687530-58af-4e95-a981-bfe8cd8933bd/fef8766d-1756-4973-85af-765f0f491c0a"
+					(reference "#PWR026")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "solar_car:R")
+		(at 142.24 185.42 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "e81d540b-7a4d-47b9-a7fc-ac5e98d36647")
+		(property "Reference" "R8"
+			(at 146.05 184.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "4.7k"
+			(at 146.05 186.69 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 142.24 185.42 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 142.24 185.42 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 142.24 185.42 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "52d596b8-872c-44e9-83f1-ba88bcd568d8")
+		)
+		(pin "2"
+			(uuid "2bb4d1cc-dd3f-4bd3-96bc-8b8f8e0ff12d")
+		)
+		(instances
+			(project "solar_car"
+				(path "/73687530-58af-4e95-a981-bfe8cd8933bd/fef8766d-1756-4973-85af-765f0f491c0a"
+					(reference "R8")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "solar_car:Motor_DC")
+		(at 332.26 130.81 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "f233befa-d450-4ebf-858d-b9633f8918dc")
+		(property "Reference" "M4"
+			(at 336.07 129.54 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "TT rear-right"
+			(at 336.07 132.08 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 332.26 130.81 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 332.26 130.81 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 332.26 130.81 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "1e0df001-8344-49d4-8833-4530e0014d11")
+		)
+		(pin "2"
+			(uuid "572c186f-fef6-4014-977f-611261b9fa51")
+		)
+		(instances
+			(project "solar_car"
+				(path "/73687530-58af-4e95-a981-bfe8cd8933bd/fef8766d-1756-4973-85af-765f0f491c0a"
+					(reference "M4")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "solar_car:PWR_GND")
+		(at 142.24 148.59 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "f697d3d1-bc75-44e1-9a48-1c32375b64da")
+		(property "Reference" "#PWR034"
+			(at 142.24 148.59 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 142.24 152.4 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 142.24 148.59 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 142.24 148.59 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 142.24 148.59 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "4a1291b4-f667-4648-9a02-78877675e006")
+		)
+		(instances
+			(project "solar_car"
+				(path "/73687530-58af-4e95-a981-bfe8cd8933bd/fef8766d-1756-4973-85af-765f0f491c0a"
+					(reference "#PWR034")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "solar_car:HC-SR04")
+		(at 104.14 171.45 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "fa058062-7282-4e51-a654-5af641d8ed86")
+		(property "Reference" "U15"
+			(at 97.79 161.29 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "HC-SR04 Rear"
+			(at 97.79 186.69 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 104.14 171.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 104.14 171.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 104.14 171.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "46a92064-c5fa-4d0b-bd8e-52ec0fbcfd09")
+		)
+		(pin "2"
+			(uuid "9432858e-d01e-47f0-91e7-1ec63a9e9021")
+		)
+		(pin "3"
+			(uuid "b4af7a29-9c05-477d-8204-7ffa3b1c0eb7")
+		)
+		(pin "4"
+			(uuid "143ef55e-7e05-4b44-98f2-01bc0b542c39")
+		)
+		(instances
+			(project "solar_car"
+				(path "/73687530-58af-4e95-a981-bfe8cd8933bd/fef8766d-1756-4973-85af-765f0f491c0a"
+					(reference "U15")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "solar_car:PWR_P5V")
+		(at 118.11 166.37 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "fb7c1acb-8790-4eb3-825f-1ea301875d3f")
+		(property "Reference" "#PWR035"
+			(at 118.11 166.37 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+5V"
+			(at 121.67 166.37 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 118.11 166.37 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 118.11 166.37 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 118.11 166.37 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "95ed0395-ee83-48dd-858a-4e7180fad6c9")
+		)
+		(instances
+			(project "solar_car"
+				(path "/73687530-58af-4e95-a981-bfe8cd8933bd/fef8766d-1756-4973-85af-765f0f491c0a"
+					(reference "#PWR035")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "solar_car:HC-SR04")
+		(at 104.14 124.46 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "fc423db0-a5fd-4cd3-a767-ce79587330f5")
+		(property "Reference" "U14"
+			(at 97.79 114.3 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "HC-SR04 Front-right (-30°)"
+			(at 97.79 139.7 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 104.14 124.46 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 104.14 124.46 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 104.14 124.46 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "1b41081e-c6bf-4a9e-aaef-ee184c77014d")
+		)
+		(pin "2"
+			(uuid "a8aa421d-5213-4487-9408-3989aec01528")
+		)
+		(pin "3"
+			(uuid "4cc175ee-b26c-4a3f-afd1-657d503a4844")
+		)
+		(pin "4"
+			(uuid "8ab767c4-171f-44aa-9cb1-53da38157601")
+		)
+		(instances
+			(project "solar_car"
+				(path "/73687530-58af-4e95-a981-bfe8cd8933bd/fef8766d-1756-4973-85af-765f0f491c0a"
+					(reference "U14")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "solar_car:Motor_DC")
+		(at 302.26 130.81 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "fe00f19e-09f6-406f-bf76-502bd2f8ac6a")
+		(property "Reference" "M3"
+			(at 306.07 129.54 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "TT front-right"
+			(at 306.07 132.08 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 302.26 130.81 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 302.26 130.81 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 302.26 130.81 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "dc96521c-0650-4bc5-8b29-fd02804e89db")
+		)
+		(pin "2"
+			(uuid "5d07fc67-491b-4626-bbd7-2276418246b1")
+		)
+		(instances
+			(project "solar_car"
+				(path "/73687530-58af-4e95-a981-bfe8cd8933bd/fef8766d-1756-4973-85af-765f0f491c0a"
+					(reference "M3")
+					(unit 1)
+				)
+			)
+		)
+	)
+)

@@ -1,0 +1,3618 @@
+(kicad_sch
+	(version 20250114)
+	(generator "eeschema")
+	(generator_version "9.0")
+	(uuid "355bc226-c01e-4171-88f8-0bb88a821759")
+	(paper "A3")
+	(title_block
+		(title "Solar tracker - Nano, LDRs, servos")
+		(date "2026-10-06")
+		(rev "2")
+		(company "EEE4022S Solar Car - Yonatan (TRKJON002)")
+		(comment 1 "Module-level wiring; nets joined by labels")
+	)
+	(lib_symbols
+		(symbol "solar_car:Arduino_Nano"
+			(pin_names
+				(offset 1.016)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "U"
+				(at -10.16 40.64 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "Arduino_Nano"
+				(at -10.16 -40.64 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Arduino Nano (ATmega328P) - solar tracker controller"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "Arduino_Nano_0_1"
+				(rectangle
+					(start -10.16 39.37)
+					(end 10.16 -39.37)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+			)
+			(symbol "Arduino_Nano_1_1"
+				(pin passive line
+					(at -12.7 35.56 0)
+					(length 2.54)
+					(name "D1/TX"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -12.7 30.48 0)
+					(length 2.54)
+					(name "D0/RX"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -12.7 25.4 0)
+					(length 2.54)
+					(name "RST"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -12.7 20.32 0)
+					(length 2.54)
+					(name "GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -12.7 15.24 0)
+					(length 2.54)
+					(name "D2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "5"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -12.7 10.16 0)
+					(length 2.54)
+					(name "D3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "6"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -12.7 5.08 0)
+					(length 2.54)
+					(name "D4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "7"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -12.7 0 0)
+					(length 2.54)
+					(name "D5"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "8"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -12.7 -5.08 0)
+					(length 2.54)
+					(name "D6"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "9"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -12.7 -10.16 0)
+					(length 2.54)
+					(name "D7"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "10"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -12.7 -15.24 0)
+					(length 2.54)
+					(name "D8"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "11"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -12.7 -20.32 0)
+					(length 2.54)
+					(name "D9"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "12"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -12.7 -25.4 0)
+					(length 2.54)
+					(name "D10"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "13"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -12.7 -30.48 0)
+					(length 2.54)
+					(name "D11"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "14"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -12.7 -35.56 0)
+					(length 2.54)
+					(name "D12"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "15"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 12.7 35.56 180)
+					(length 2.54)
+					(name "VIN"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "30"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 12.7 30.48 180)
+					(length 2.54)
+					(name "GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "29"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 12.7 25.4 180)
+					(length 2.54)
+					(name "RST"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "28"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 12.7 20.32 180)
+					(length 2.54)
+					(name "5V"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "27"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 12.7 15.24 180)
+					(length 2.54)
+					(name "A7"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "26"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 12.7 10.16 180)
+					(length 2.54)
+					(name "A6"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "25"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 12.7 5.08 180)
+					(length 2.54)
+					(name "A5"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "24"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 12.7 0 180)
+					(length 2.54)
+					(name "A4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "23"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 12.7 -5.08 180)
+					(length 2.54)
+					(name "A3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "22"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 12.7 -10.16 180)
+					(length 2.54)
+					(name "A2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "21"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 12.7 -15.24 180)
+					(length 2.54)
+					(name "A1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "20"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 12.7 -20.32 180)
+					(length 2.54)
+					(name "A0"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "19"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 12.7 -25.4 180)
+					(length 2.54)
+					(name "AREF"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "18"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 12.7 -30.48 180)
+					(length 2.54)
+					(name "3V3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "17"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 12.7 -35.56 180)
+					(length 2.54)
+					(name "D13"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "16"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "solar_car:LDR"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "R"
+				(at 3.81 1.27 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "LDR"
+				(at 3.81 -1.27 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Light dependent resistor"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "LDR_0_1"
+				(polyline
+					(pts
+						(xy -4.06 3.3) (xy -1.78 1.02)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -4.06 1.27) (xy -1.78 -1.02)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -1.78 1.02) (xy -2.54 1.27) (xy -2.03 1.78) (xy -1.78 1.02)
+					)
+					(stroke
+						(width 0.1)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(polyline
+					(pts
+						(xy -1.78 -1.02) (xy -2.54 -0.76) (xy -2.03 -0.25) (xy -1.78 -1.02)
+					)
+					(stroke
+						(width 0.1)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(rectangle
+					(start -1.02 2.54)
+					(end 1.02 -2.54)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "LDR_1_1"
+				(pin passive line
+					(at 0 5.08 270)
+					(length 2.54)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -5.08 90)
+					(length 2.54)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "solar_car:PWR_GND"
+			(power)
+			(pin_names
+				(offset 0)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "#PWR"
+				(at 0 -6.35 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Value" "GND"
+				(at 0 -3.81 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Power net GND"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "PWR_GND_0_1"
+				(polyline
+					(pts
+						(xy 0 0) (xy 0 -1.27) (xy 1.27 -1.27) (xy 0 -2.54) (xy -1.27 -1.27) (xy 0 -1.27)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "PWR_GND_1_1"
+				(pin power_in line
+					(at 0 0 270)
+					(length 0)
+					(hide yes)
+					(name "GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "solar_car:PWR_P5V"
+			(power)
+			(pin_names
+				(offset 0)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "#PWR"
+				(at 0 -6.35 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Value" "+5V"
+				(at 0 3.56 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Power net +5V"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "PWR_P5V_0_1"
+				(polyline
+					(pts
+						(xy -0.76 1.27) (xy 0 2.54)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 2.54) (xy 0.76 1.27)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 0) (xy 0 2.54)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "PWR_P5V_1_1"
+				(pin power_in line
+					(at 0 0 90)
+					(length 0)
+					(hide yes)
+					(name "+5V"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "solar_car:R"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "R"
+				(at 3.81 1.27 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "R"
+				(at 3.81 -1.27 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Resistor"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "R_0_1"
+				(rectangle
+					(start -1.02 2.54)
+					(end 1.02 -2.54)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "R_1_1"
+				(pin passive line
+					(at 0 5.08 270)
+					(length 2.54)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -5.08 90)
+					(length 2.54)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "solar_car:Servo_MG90S"
+			(pin_names
+				(offset 1.016)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "M"
+				(at -6.35 10.16 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "Servo_MG90S"
+				(at -6.35 -10.16 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "MG90S metal-gear micro servo"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "Servo_MG90S_0_1"
+				(rectangle
+					(start -6.35 8.89)
+					(end 6.35 -8.89)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+			)
+			(symbol "Servo_MG90S_1_1"
+				(pin passive line
+					(at -8.89 5.08 0)
+					(length 2.54)
+					(name "PWM"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -8.89 0 0)
+					(length 2.54)
+					(name "+5V"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -8.89 -5.08 0)
+					(length 2.54)
+					(name "GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+	)
+	(junction
+		(at 144.78 114.3)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "0a594492-899d-4407-a28a-78f2c2aebd1e")
+	)
+	(junction
+		(at 85.09 113.03)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "7fd48c41-dfcb-4732-a3dd-4f878475d7a2")
+	)
+	(junction
+		(at 175.26 114.3)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "89e1a018-2dfc-4241-85fe-60e460b58037")
+	)
+	(junction
+		(at 115.57 113.03)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "e8d4006d-48f5-4644-b3b1-0a71c0f9f6a3")
+	)
+	(no_connect
+		(at 217.3 114.92)
+		(uuid "19ee222e-c764-42b9-bb00-9cad70636b51")
+	)
+	(no_connect
+		(at 217.3 89.52)
+		(uuid "2bad668a-6cef-4fed-8d0f-c2fb591ff84d")
+	)
+	(no_connect
+		(at 242.7 150.48)
+		(uuid "2fcd8514-3d57-4e33-ad35-65a023264879")
+	)
+	(no_connect
+		(at 242.7 114.92)
+		(uuid "464fae85-5858-462b-806f-7918bcaccf2a")
+	)
+	(no_connect
+		(at 242.7 120)
+		(uuid "476eac30-8227-4fd8-aaef-2f9285f608c5")
+	)
+	(no_connect
+		(at 217.3 130.16)
+		(uuid "4c246b07-aa80-4172-bd0d-2ee46834d2e6")
+	)
+	(no_connect
+		(at 242.7 155.56)
+		(uuid "4fae1f8f-fce2-4c29-b406-64fadf078396")
+	)
+	(no_connect
+		(at 217.3 135.24)
+		(uuid "5ab4618b-685f-47ed-8759-59cb5b1a9f82")
+	)
+	(no_connect
+		(at 217.3 150.48)
+		(uuid "5acfe8aa-b465-48b3-b25f-e4edf959adb0")
+	)
+	(no_connect
+		(at 242.7 94.6)
+		(uuid "67a77319-28eb-4ebc-9c99-ab252d7124fe")
+	)
+	(no_connect
+		(at 242.7 84.44)
+		(uuid "6a7c878b-4c05-46be-8309-c434adc62d48")
+	)
+	(no_connect
+		(at 217.3 155.56)
+		(uuid "6d14604b-c049-49f2-89ab-96d52864b193")
+	)
+	(no_connect
+		(at 217.3 109.84)
+		(uuid "99c29f35-1031-4f2c-af7e-b7d095bedb74")
+	)
+	(no_connect
+		(at 242.7 109.84)
+		(uuid "9b441437-1789-441f-8073-4e416aee858a")
+	)
+	(no_connect
+		(at 217.3 120)
+		(uuid "aec9028b-9e5f-4de0-938e-45c739d01320")
+	)
+	(no_connect
+		(at 217.3 84.44)
+		(uuid "b9b03baf-1fad-49db-878b-a1ac6ad828e0")
+	)
+	(no_connect
+		(at 217.3 125.08)
+		(uuid "cac15fb9-44f5-4b99-b066-813b10246ca5")
+	)
+	(no_connect
+		(at 242.7 145.4)
+		(uuid "d468caae-5df8-40b8-9c22-aadc0f9f1cf3")
+	)
+	(no_connect
+		(at 217.3 94.6)
+		(uuid "ebae1cff-1f98-44cb-babd-0b5b77b6a710")
+	)
+	(no_connect
+		(at 242.7 104.76)
+		(uuid "f4c2a20e-314c-4baf-a69f-5a9e48d3ea06")
+	)
+	(wire
+		(pts
+			(xy 156.21 161.29) (xy 149.86 161.29)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "05cc9105-009e-4d40-b923-28e900ccbbe5")
+	)
+	(wire
+		(pts
+			(xy 115.57 106.68) (xy 115.57 113.03)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0f499766-9be2-4dab-bb16-cdc24ebc734f")
+	)
+	(wire
+		(pts
+			(xy 242.7 99.68) (xy 247.78 99.68)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1fb6600e-545d-4209-b825-9d482101b4d6")
+	)
+	(wire
+		(pts
+			(xy 106.68 156.21) (xy 101.6 156.21)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "27ed470e-cfc0-4be3-8f04-e81743f70e1a")
+	)
+	(wire
+		(pts
+			(xy 144.78 106.68) (xy 144.78 114.3)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2d26a98b-1335-47c8-94c6-9b50dcdcb752")
+	)
+	(wire
+		(pts
+			(xy 95.25 113.03) (xy 85.09 113.03)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "490d4522-d8bb-490e-aff6-57afce2710fe")
+	)
+	(wire
+		(pts
+			(xy 217.3 104.76) (xy 212.22 104.76)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "52eb93cd-6a7b-4218-8546-b1970c45f219")
+	)
+	(wire
+		(pts
+			(xy 217.3 145.4) (xy 212.22 145.4)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "531962ac-8dce-41a6-8863-fcb2945e20a3")
+	)
+	(wire
+		(pts
+			(xy 152.4 156.21) (xy 156.21 156.21)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "54ec9190-7b80-4ca2-bd25-781cfa853ed6")
+	)
+	(wire
+		(pts
+			(xy 181.61 114.3) (xy 175.26 114.3)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "62f93a8d-75d2-4216-bf25-5805b0d72e83")
+	)
+	(wire
+		(pts
+			(xy 144.78 130.81) (xy 144.78 135.89)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "64a9608a-bb3e-4887-9036-a79508fd1e3d")
+	)
+	(wire
+		(pts
+			(xy 85.09 113.03) (xy 85.09 120.65)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "659ea572-0248-4048-8997-3abca16a7d7f")
+	)
+	(wire
+		(pts
+			(xy 85.09 106.68) (xy 85.09 113.03)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "679e8eae-ca31-48eb-a9f6-c4bfc43c9290")
+	)
+	(wire
+		(pts
+			(xy 217.3 99.68) (xy 212.22 99.68)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "791d6cc3-cb9d-41ee-abb8-a8ea6e9d7cf2")
+	)
+	(wire
+		(pts
+			(xy 106.68 161.29) (xy 101.6 161.29)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7ee6e868-0806-46b8-8383-a8cee96faeaa")
+	)
+	(wire
+		(pts
+			(xy 156.21 166.37) (xy 149.86 166.37)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "866ddb92-cb5f-4e19-9ace-f56ab2ef8f28")
+	)
+	(wire
+		(pts
+			(xy 124.46 113.03) (xy 115.57 113.03)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8d300f4d-f020-493a-99ec-f006e9aa6783")
+	)
+	(wire
+		(pts
+			(xy 115.57 113.03) (xy 115.57 120.65)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "91de9c52-8a3b-4652-afd0-e8ab51c9fcdd")
+	)
+	(wire
+		(pts
+			(xy 242.7 89.52) (xy 247.78 89.52)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "93d72eab-56f3-48a1-b781-a019b95cfd8f")
+	)
+	(wire
+		(pts
+			(xy 217.3 140.32) (xy 212.22 140.32)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b11008e5-193f-4021-8fe0-2e93682f53b1")
+	)
+	(wire
+		(pts
+			(xy 115.57 96.52) (xy 115.57 91.44)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "bbffec93-f95c-4992-ad6f-95316d4d2871")
+	)
+	(wire
+		(pts
+			(xy 242.7 135.24) (xy 247.78 135.24)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "cf0880bc-b8e7-4cb3-b46a-165f5c2cbba6")
+	)
+	(wire
+		(pts
+			(xy 242.7 125.08) (xy 247.78 125.08)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d1526e48-7263-4263-99a1-38dbe937b8f2")
+	)
+	(wire
+		(pts
+			(xy 115.57 130.81) (xy 115.57 135.89)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d2a8c117-d12e-42af-b62f-7657d79cd20b")
+	)
+	(wire
+		(pts
+			(xy 85.09 130.81) (xy 85.09 135.89)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d5df6cf3-5a4f-40f7-a955-758ad5392550")
+	)
+	(wire
+		(pts
+			(xy 175.26 96.52) (xy 175.26 91.44)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "dc78f60e-cf0f-49ab-8a03-4a7ec218614c")
+	)
+	(wire
+		(pts
+			(xy 175.26 106.68) (xy 175.26 114.3)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "dde4e075-071a-4aa6-b01d-11ed36315f30")
+	)
+	(wire
+		(pts
+			(xy 106.68 166.37) (xy 101.6 166.37)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "de32f54c-0f66-41ee-a6a7-ff5b906ba6cd")
+	)
+	(wire
+		(pts
+			(xy 85.09 96.52) (xy 85.09 91.44)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "dffb9b2c-67ae-49f6-a883-52723631867e")
+	)
+	(wire
+		(pts
+			(xy 144.78 114.3) (xy 144.78 120.65)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e097f48e-d9cf-47e9-aa23-66ca0839e2fd")
+	)
+	(wire
+		(pts
+			(xy 175.26 114.3) (xy 175.26 120.65)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e393cabf-9ad3-4dd8-ac09-2d7660bcbca1")
+	)
+	(wire
+		(pts
+			(xy 149.86 114.3) (xy 144.78 114.3)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ec467aa5-193b-4cf6-a679-18f55b4bcd3e")
+	)
+	(wire
+		(pts
+			(xy 144.78 96.52) (xy 144.78 91.44)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "eef9935c-a3e4-4db1-ba58-d9667e25d2ac")
+	)
+	(wire
+		(pts
+			(xy 175.26 130.81) (xy 175.26 135.89)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ef2cc1e8-5f8f-4c1f-b1b9-a6fbac218edc")
+	)
+	(wire
+		(pts
+			(xy 242.7 130.16) (xy 247.78 130.16)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f43e3507-64ba-4268-a8ae-746be5c9cd7a")
+	)
+	(wire
+		(pts
+			(xy 242.7 140.32) (xy 247.78 140.32)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f5347907-ebbb-4fd9-bdea-3acfe15983c5")
+	)
+	(label "SERVO_TILT"
+		(at 152.4 156.21 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "12ba091d-ffbc-4487-a84a-8d40891a919c")
+	)
+	(label "LDR_TR"
+		(at 124.46 113.03 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "1d6c1501-e8a1-4fd3-adb9-a83c0e012761")
+	)
+	(label "LDR_TR"
+		(at 247.78 135.24 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "266b1428-21b2-4733-9793-c351435ecb37")
+	)
+	(label "LDR_BL"
+		(at 149.86 114.3 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "6827fc87-7775-4e05-ab3a-4787e7596244")
+	)
+	(label "LDR_TL"
+		(at 247.78 140.32 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "70753e06-9e37-476c-b8f7-051307f69cab")
+	)
+	(label "LDR_TL"
+		(at 95.25 113.03 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "76d9b008-6a6b-429d-9695-99edd9fc78fe")
+	)
+	(label "LDR_BR"
+		(at 247.78 125.08 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "a6bec6ea-9cff-4a60-9701-a94cf8636739")
+	)
+	(label "SERVO_PAN"
+		(at 212.22 140.32 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "afe820c7-d40d-4a37-a704-23d1ec90dbaf")
+	)
+	(label "LDR_BR"
+		(at 181.61 114.3 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "c33dbc82-e8f1-4c34-98e9-a3b8acb629c1")
+	)
+	(label "SERVO_PAN"
+		(at 101.6 156.21 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "c4da4f98-f2a6-42bf-8bc2-abf03048045f")
+	)
+	(label "LDR_BL"
+		(at 247.78 130.16 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "d35dea87-090b-4a17-82aa-fbd96f3c151a")
+	)
+	(label "SERVO_TILT"
+		(at 212.22 145.4 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "de8777c1-c786-4122-903f-0ca8dbe07b1a")
+	)
+	(global_label "MOVING"
+		(shape passive)
+		(at 212.22 104.76 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "4ad01152-1666-4609-a15d-39227938ba06")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 212.22 104.76 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+	)
+	(symbol
+		(lib_id "solar_car:R")
+		(at 85.09 125.73 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "030e3c89-6bd6-46f6-990e-96f98260155a")
+		(property "Reference" "R13"
+			(at 88.9 124.46 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "10k"
+			(at 88.9 127 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 85.09 125.73 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 85.09 125.73 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 85.09 125.73 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "a9ba79b0-0592-4ff7-ad56-942ff5fffb63")
+		)
+		(pin "2"
+			(uuid "e7189549-a070-4aeb-9e11-db13eca8f776")
+		)
+		(instances
+			(project "solar_car"
+				(path "/73687530-58af-4e95-a981-bfe8cd8933bd/355bc226-c01e-4171-88f8-0bb88a821759"
+					(reference "R13")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "solar_car:R")
+		(at 144.78 125.73 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "0a96cedb-5654-4b8e-938a-71fe33d7c73c")
+		(property "Reference" "R15"
+			(at 148.59 124.46 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "10k"
+			(at 148.59 127 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 144.78 125.73 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 144.78 125.73 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 144.78 125.73 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "5af14889-bf04-484e-9b45-bbd1b94b5ae5")
+		)
+		(pin "2"
+			(uuid "3fd708cc-bc36-4535-b1ed-fbd5711b0554")
+		)
+		(instances
+			(project "solar_car"
+				(path "/73687530-58af-4e95-a981-bfe8cd8933bd/355bc226-c01e-4171-88f8-0bb88a821759"
+					(reference "R15")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "solar_car:PWR_P5V")
+		(at 85.09 91.44 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "0ed7bbbc-f261-42f0-be6c-3908a571d4d3")
+		(property "Reference" "#PWR057"
+			(at 85.09 91.44 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+5V"
+			(at 85.09 87.88 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 85.09 91.44 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 85.09 91.44 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 85.09 91.44 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "694de558-3b84-41ce-a6ac-b25437db31c4")
+		)
+		(instances
+			(project "solar_car"
+				(path "/73687530-58af-4e95-a981-bfe8cd8933bd/355bc226-c01e-4171-88f8-0bb88a821759"
+					(reference "#PWR057")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "solar_car:LDR")
+		(at 85.09 101.6 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "1dc1a278-9b52-49c8-8e4b-78e2e168fe1a")
+		(property "Reference" "R9"
+			(at 88.9 100.33 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "LDR top-left"
+			(at 88.9 102.87 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 85.09 101.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 85.09 101.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 85.09 101.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "014a631a-d517-463c-b942-5ac79a4b4ae1")
+		)
+		(pin "2"
+			(uuid "75e5ab2b-b57a-4377-a98d-ed48a449d72c")
+		)
+		(instances
+			(project "solar_car"
+				(path "/73687530-58af-4e95-a981-bfe8cd8933bd/355bc226-c01e-4171-88f8-0bb88a821759"
+					(reference "R9")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "solar_car:PWR_P5V")
+		(at 115.57 91.44 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "1df9d0f2-2baf-44ba-8d61-f64770e99c38")
+		(property "Reference" "#PWR059"
+			(at 115.57 91.44 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+5V"
+			(at 115.57 87.88 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 115.57 91.44 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 115.57 91.44 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 115.57 91.44 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "05c98efc-4f4b-429c-ab70-9f37e675d225")
+		)
+		(instances
+			(project "solar_car"
+				(path "/73687530-58af-4e95-a981-bfe8cd8933bd/355bc226-c01e-4171-88f8-0bb88a821759"
+					(reference "#PWR059")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "solar_car:PWR_GND")
+		(at 175.26 135.89 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "27542099-db14-41c0-8603-b9d87e519aa1")
+		(property "Reference" "#PWR064"
+			(at 175.26 135.89 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 175.26 139.7 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 175.26 135.89 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 175.26 135.89 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 175.26 135.89 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "fde37174-cce7-46ae-88e0-86390bfa7851")
+		)
+		(instances
+			(project "solar_car"
+				(path "/73687530-58af-4e95-a981-bfe8cd8933bd/355bc226-c01e-4171-88f8-0bb88a821759"
+					(reference "#PWR064")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "solar_car:PWR_GND")
+		(at 149.86 166.37 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "303992be-a365-444d-a0c0-e538f8221dde")
+		(property "Reference" "#PWR068"
+			(at 149.86 166.37 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 146.05 166.37 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" ""
+			(at 149.86 166.37 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 149.86 166.37 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 149.86 166.37 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "a32e0a95-13c5-441c-96a7-8c88f87a40a2")
+		)
+		(instances
+			(project "solar_car"
+				(path "/73687530-58af-4e95-a981-bfe8cd8933bd/355bc226-c01e-4171-88f8-0bb88a821759"
+					(reference "#PWR068")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "solar_car:LDR")
+		(at 175.26 101.6 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "37c6d975-0c52-4080-a2aa-b5d29349a2f9")
+		(property "Reference" "R12"
+			(at 179.07 100.33 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "LDR bottom-right"
+			(at 179.07 102.87 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 175.26 101.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 175.26 101.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 175.26 101.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "afda683e-149c-4199-bdae-3ba9891247f2")
+		)
+		(pin "2"
+			(uuid "522a1604-0baa-4b65-a62d-ab2de0f9a02e")
+		)
+		(instances
+			(project "solar_car"
+				(path "/73687530-58af-4e95-a981-bfe8cd8933bd/355bc226-c01e-4171-88f8-0bb88a821759"
+					(reference "R12")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "solar_car:PWR_P5V")
+		(at 175.26 91.44 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "4a716a35-839c-45eb-9b7c-b97e86969102")
+		(property "Reference" "#PWR063"
+			(at 175.26 91.44 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+5V"
+			(at 175.26 87.88 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 175.26 91.44 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 175.26 91.44 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 175.26 91.44 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "c95e7f61-4e64-4d99-8b52-83e5ed746f50")
+		)
+		(instances
+			(project "solar_car"
+				(path "/73687530-58af-4e95-a981-bfe8cd8933bd/355bc226-c01e-4171-88f8-0bb88a821759"
+					(reference "#PWR063")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "solar_car:LDR")
+		(at 144.78 101.6 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "4b6734ec-19e9-408f-b60e-d502c571756a")
+		(property "Reference" "R11"
+			(at 148.59 100.33 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "LDR bottom-left"
+			(at 148.59 102.87 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 144.78 101.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 144.78 101.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 144.78 101.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "dadd1400-0f9f-43ee-ab59-d6dd6c2d7f2b")
+		)
+		(pin "2"
+			(uuid "50272153-4ab7-4632-8c3d-dc62fcbbda68")
+		)
+		(instances
+			(project "solar_car"
+				(path "/73687530-58af-4e95-a981-bfe8cd8933bd/355bc226-c01e-4171-88f8-0bb88a821759"
+					(reference "R11")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "solar_car:PWR_GND")
+		(at 212.22 99.68 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "5b4ceb42-b9ee-4aea-aa8b-2fea77884081")
+		(property "Reference" "#PWR054"
+			(at 212.22 99.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 208.41 99.68 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" ""
+			(at 212.22 99.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 212.22 99.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 212.22 99.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "67f00269-b9a6-462b-b155-3feaed35840a")
+		)
+		(instances
+			(project "solar_car"
+				(path "/73687530-58af-4e95-a981-bfe8cd8933bd/355bc226-c01e-4171-88f8-0bb88a821759"
+					(reference "#PWR054")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "solar_car:PWR_GND")
+		(at 115.57 135.89 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "67985805-4741-4c32-8ffc-1d92bf0765e9")
+		(property "Reference" "#PWR060"
+			(at 115.57 135.89 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 115.57 139.7 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 115.57 135.89 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 115.57 135.89 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 115.57 135.89 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "ffe9d1b6-30c1-48d9-8242-c3040476ba8a")
+		)
+		(instances
+			(project "solar_car"
+				(path "/73687530-58af-4e95-a981-bfe8cd8933bd/355bc226-c01e-4171-88f8-0bb88a821759"
+					(reference "#PWR060")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "solar_car:PWR_GND")
+		(at 247.78 89.52 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "712b84ea-3033-4e67-b60f-c6b60a830c5a")
+		(property "Reference" "#PWR055"
+			(at 247.78 89.52 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 251.59 89.52 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" ""
+			(at 247.78 89.52 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 247.78 89.52 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 247.78 89.52 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "772ba21e-51f4-4762-afd4-ae7d52483f66")
+		)
+		(instances
+			(project "solar_car"
+				(path "/73687530-58af-4e95-a981-bfe8cd8933bd/355bc226-c01e-4171-88f8-0bb88a821759"
+					(reference "#PWR055")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "solar_car:R")
+		(at 175.26 125.73 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "78716de8-fa83-43d9-8314-0ea3c7c22f77")
+		(property "Reference" "R16"
+			(at 179.07 124.46 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "10k"
+			(at 179.07 127 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 175.26 125.73 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 175.26 125.73 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 175.26 125.73 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "1d18c3d5-a338-45c8-b5da-78c4385a37c7")
+		)
+		(pin "2"
+			(uuid "a2860d84-8e4a-4320-9d01-d5639d6b5363")
+		)
+		(instances
+			(project "solar_car"
+				(path "/73687530-58af-4e95-a981-bfe8cd8933bd/355bc226-c01e-4171-88f8-0bb88a821759"
+					(reference "R16")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "solar_car:PWR_P5V")
+		(at 149.86 161.29 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "830ad602-4d52-4cbd-b2d5-c597c1e14696")
+		(property "Reference" "#PWR067"
+			(at 149.86 161.29 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+5V"
+			(at 146.3 161.29 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 149.86 161.29 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 149.86 161.29 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 149.86 161.29 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "2205d3d3-8c2b-4b1e-90f3-3d081f9035bd")
+		)
+		(instances
+			(project "solar_car"
+				(path "/73687530-58af-4e95-a981-bfe8cd8933bd/355bc226-c01e-4171-88f8-0bb88a821759"
+					(reference "#PWR067")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "solar_car:Arduino_Nano")
+		(at 230 120 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "953ab2e8-cbf6-430e-a64c-4a8357a37c5f")
+		(property "Reference" "U2"
+			(at 219.84 79.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "Arduino Nano"
+			(at 219.84 160.64 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 230 120 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 230 120 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 230 120 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "da714ba0-a8f0-4bcd-b549-4002f193ce98")
+		)
+		(pin "2"
+			(uuid "26e9c236-0072-463b-a3ac-ed1c2e134c31")
+		)
+		(pin "3"
+			(uuid "b2917bec-7955-4806-b366-96d0153348c0")
+		)
+		(pin "4"
+			(uuid "02a1a6ac-0b91-4216-b0b8-cffed01f28f5")
+		)
+		(pin "5"
+			(uuid "55da2843-f7e7-4b6c-8baf-f8690bc52036")
+		)
+		(pin "6"
+			(uuid "94080970-8177-41b2-9fcf-c9d5a3bd7d0e")
+		)
+		(pin "7"
+			(uuid "4ff4f785-579a-45b3-a99c-8e2fad381d2e")
+		)
+		(pin "8"
+			(uuid "fe66df0f-9352-4e9a-9191-f6d9589c5303")
+		)
+		(pin "9"
+			(uuid "38e02c28-4ce9-4ae5-82ce-6a39ac0cc48a")
+		)
+		(pin "10"
+			(uuid "6eaedc48-a0b7-4038-9cc6-e5bf856ecd87")
+		)
+		(pin "11"
+			(uuid "b58c0044-cb97-4706-8b8f-10d3476cd26b")
+		)
+		(pin "12"
+			(uuid "690f3208-521e-4efe-89a2-d1a9f4b440ba")
+		)
+		(pin "13"
+			(uuid "2cae6946-139a-4ed2-83df-a54c74ed6ef1")
+		)
+		(pin "14"
+			(uuid "1ee9062a-1e20-4272-804e-123d58e00ff1")
+		)
+		(pin "15"
+			(uuid "74782c21-e03b-491c-870c-7bb2f97ebd8c")
+		)
+		(pin "30"
+			(uuid "9d03089e-ba95-43ec-a53c-40d78f1bb2a2")
+		)
+		(pin "29"
+			(uuid "5d8d41be-cd06-423a-88ea-44391ffae2c0")
+		)
+		(pin "28"
+			(uuid "2e5932a2-5f01-4b55-82e2-5e507c2c0932")
+		)
+		(pin "27"
+			(uuid "231b0787-29b8-4aee-872b-501a88efcfb8")
+		)
+		(pin "26"
+			(uuid "81f34b83-20b5-4db7-b4c5-5e511e63e35f")
+		)
+		(pin "25"
+			(uuid "5f36b84d-8e0c-46dc-bf7d-5e8cd88ab48f")
+		)
+		(pin "24"
+			(uuid "a43a2c6b-956d-4df1-b2c3-1814138dd421")
+		)
+		(pin "23"
+			(uuid "75b47d15-b5ed-4f51-9a0a-8f409f362599")
+		)
+		(pin "22"
+			(uuid "824c0ea5-296e-4b6b-a809-53e4595555f4")
+		)
+		(pin "21"
+			(uuid "d0bb9430-7b45-47ff-8e2c-c02195033d87")
+		)
+		(pin "20"
+			(uuid "3a00077a-d904-4f48-87c0-3363c52e8dc5")
+		)
+		(pin "19"
+			(uuid "9c5fe00e-9b8a-4e44-bfe5-a61343c0fa20")
+		)
+		(pin "18"
+			(uuid "ad798ddf-1c8f-4ce5-a954-c582f65337dd")
+		)
+		(pin "17"
+			(uuid "b37e3fe8-8e43-4749-b5ff-7d95944ebcc5")
+		)
+		(pin "16"
+			(uuid "5c049717-4758-4ad2-bef6-3a05ad9bf862")
+		)
+		(instances
+			(project "solar_car"
+				(path "/73687530-58af-4e95-a981-bfe8cd8933bd/355bc226-c01e-4171-88f8-0bb88a821759"
+					(reference "U2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "solar_car:Servo_MG90S")
+		(at 165.1 161.29 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "a219a1c6-eb44-4963-bef4-e93862c2aaed")
+		(property "Reference" "M6"
+			(at 158.75 151.13 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "MG90S tilt"
+			(at 158.75 171.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 165.1 161.29 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 165.1 161.29 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 165.1 161.29 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "25a60f77-6d0e-4fd1-8b0e-235f0c997b04")
+		)
+		(pin "2"
+			(uuid "190db6c8-e447-48e2-ad3f-5ad35f26fff3")
+		)
+		(pin "3"
+			(uuid "660749c2-014e-4f2c-8deb-17f33f248092")
+		)
+		(instances
+			(project "solar_car"
+				(path "/73687530-58af-4e95-a981-bfe8cd8933bd/355bc226-c01e-4171-88f8-0bb88a821759"
+					(reference "M6")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "solar_car:PWR_GND")
+		(at 101.6 166.37 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "b2b5722a-fafe-4bc3-98cf-36cd97d7cc48")
+		(property "Reference" "#PWR072"
+			(at 101.6 166.37 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 97.79 166.37 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" ""
+			(at 101.6 166.37 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 101.6 166.37 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 101.6 166.37 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "8b485fdf-5802-4f4a-b75b-3429e20cdffb")
+		)
+		(instances
+			(project "solar_car"
+				(path "/73687530-58af-4e95-a981-bfe8cd8933bd/355bc226-c01e-4171-88f8-0bb88a821759"
+					(reference "#PWR072")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "solar_car:Servo_MG90S")
+		(at 115.57 161.29 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "b853931a-28f3-4589-a0f4-91722671fae6")
+		(property "Reference" "M5"
+			(at 109.22 151.13 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "MG90S pan"
+			(at 109.22 171.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 115.57 161.29 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 115.57 161.29 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 115.57 161.29 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "0c3e2983-d921-430a-8980-7bf2de306c54")
+		)
+		(pin "2"
+			(uuid "42f25df5-2963-45f0-bdef-d7cfbf859fe5")
+		)
+		(pin "3"
+			(uuid "e25c3a0c-0a98-4159-adf6-939b52610414")
+		)
+		(instances
+			(project "solar_car"
+				(path "/73687530-58af-4e95-a981-bfe8cd8933bd/355bc226-c01e-4171-88f8-0bb88a821759"
+					(reference "M5")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "solar_car:PWR_GND")
+		(at 85.09 135.89 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "c33a54d9-2d39-469e-b2fa-b78bef5865d7")
+		(property "Reference" "#PWR058"
+			(at 85.09 135.89 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 85.09 139.7 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 85.09 135.89 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 85.09 135.89 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 85.09 135.89 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "23165647-9540-438e-bff4-e6571559af59")
+		)
+		(instances
+			(project "solar_car"
+				(path "/73687530-58af-4e95-a981-bfe8cd8933bd/355bc226-c01e-4171-88f8-0bb88a821759"
+					(reference "#PWR058")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "solar_car:LDR")
+		(at 115.57 101.6 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "d6e7e230-22c9-4aa1-b402-7a930ebab6d8")
+		(property "Reference" "R10"
+			(at 119.38 100.33 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "LDR top-right"
+			(at 119.38 102.87 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 115.57 101.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 115.57 101.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 115.57 101.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "f2652ed1-73dd-43f1-aeb3-fb115d777a73")
+		)
+		(pin "2"
+			(uuid "7c71b693-7cd3-4a1d-97a5-f64126514727")
+		)
+		(instances
+			(project "solar_car"
+				(path "/73687530-58af-4e95-a981-bfe8cd8933bd/355bc226-c01e-4171-88f8-0bb88a821759"
+					(reference "R10")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "solar_car:PWR_P5V")
+		(at 247.78 99.68 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "d8eb87d6-27e2-4c7e-af24-e11c76629ced")
+		(property "Reference" "#PWR056"
+			(at 247.78 99.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+5V"
+			(at 251.34 99.68 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 247.78 99.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 247.78 99.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 247.78 99.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "591929b3-2385-4c20-b3e1-6c43f8e60a0c")
+		)
+		(instances
+			(project "solar_car"
+				(path "/73687530-58af-4e95-a981-bfe8cd8933bd/355bc226-c01e-4171-88f8-0bb88a821759"
+					(reference "#PWR056")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "solar_car:PWR_P5V")
+		(at 101.6 161.29 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "ebb023ce-f1a5-47e6-9bf8-08693bf1d04d")
+		(property "Reference" "#PWR071"
+			(at 101.6 161.29 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+5V"
+			(at 98.04 161.29 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 101.6 161.29 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 101.6 161.29 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 101.6 161.29 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "791cd63f-e785-46e8-b85d-dbefcce1710e")
+		)
+		(instances
+			(project "solar_car"
+				(path "/73687530-58af-4e95-a981-bfe8cd8933bd/355bc226-c01e-4171-88f8-0bb88a821759"
+					(reference "#PWR071")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "solar_car:PWR_P5V")
+		(at 144.78 91.44 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "f2887c74-ffb0-4ca6-9172-561010154bfc")
+		(property "Reference" "#PWR061"
+			(at 144.78 91.44 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+5V"
+			(at 144.78 87.88 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 144.78 91.44 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 144.78 91.44 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 144.78 91.44 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "cd6db121-bd33-455e-a452-00b426b5c094")
+		)
+		(instances
+			(project "solar_car"
+				(path "/73687530-58af-4e95-a981-bfe8cd8933bd/355bc226-c01e-4171-88f8-0bb88a821759"
+					(reference "#PWR061")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "solar_car:R")
+		(at 115.57 125.73 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "ff41c5d3-9572-4f87-b128-b8427362c2e9")
+		(property "Reference" "R14"
+			(at 119.38 124.46 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "10k"
+			(at 119.38 127 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 115.57 125.73 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 115.57 125.73 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 115.57 125.73 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "d654fbb7-6b22-4073-b027-860eaf84e8c0")
+		)
+		(pin "2"
+			(uuid "f91af3b5-e855-4767-aa7d-6d92c815f137")
+		)
+		(instances
+			(project "solar_car"
+				(path "/73687530-58af-4e95-a981-bfe8cd8933bd/355bc226-c01e-4171-88f8-0bb88a821759"
+					(reference "R14")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "solar_car:PWR_GND")
+		(at 144.78 135.89 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "ff7be9ae-ece0-44ee-9bd3-a77dd948f568")
+		(property "Reference" "#PWR062"
+			(at 144.78 135.89 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 144.78 139.7 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 144.78 135.89 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 144.78 135.89 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 144.78 135.89 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "769f820d-1583-43ac-bdb4-1ef338e4b752")
+		)
+		(instances
+			(project "solar_car"
+				(path "/73687530-58af-4e95-a981-bfe8cd8933bd/355bc226-c01e-4171-88f8-0bb88a821759"
+					(reference "#PWR062")
+					(unit 1)
+				)
+			)
+		)
+	)
+)

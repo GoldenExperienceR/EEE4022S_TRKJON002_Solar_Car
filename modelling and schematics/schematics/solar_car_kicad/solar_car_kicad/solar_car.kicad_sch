@@ -1,0 +1,158 @@
+(kicad_sch
+	(version 20250114)
+	(generator "eeschema")
+	(generator_version "9.0")
+	(uuid "73687530-58af-4e95-a981-bfe8cd8933bd")
+	(paper "A4")
+	(title_block
+		(title "Solar car - top level")
+		(date "2026-10-06")
+		(rev "2")
+		(company "EEE4022S Solar Car - Yonatan (TRKJON002)")
+		(comment 1 "Module-level wiring; nets joined by labels")
+	)
+	(lib_symbols)
+	(text "Solar car - system schematic\nPower: 3S Li-ion, MPPT solar + USB charging, 5 V logic and 7.5 V motor buck rails.\nNets cross sheets via global labels; GND/+3V3/+5V/+VMOT/VBAT/VSYS are power symbols."
+		(exclude_from_sim no)
+		(at 40 40 0)
+		(effects
+			(font
+				(size 1.6 1.6)
+			)
+			(justify left bottom)
+		)
+		(uuid "5ccd57ff-7308-47d1-a022-a5f545696846")
+	)
+	(sheet
+		(at 200 70)
+		(size 70 35)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "355bc226-c01e-4171-88f8-0bb88a821759")
+		(property "Sheetname" "Solar tracker"
+			(at 200 69.3 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "tracker.kicad_sch"
+			(at 200 105.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "solar_car"
+				(path "/73687530-58af-4e95-a981-bfe8cd8933bd"
+					(page "4")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 30 70)
+		(size 70 35)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "560c44ba-c5a2-483d-ac9f-4e25f5ea0058")
+		(property "Sheetname" "Power subsystem"
+			(at 30 69.3 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "power.kicad_sch"
+			(at 30 105.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "solar_car"
+				(path "/73687530-58af-4e95-a981-bfe8cd8933bd"
+					(page "2")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 115 70)
+		(size 70 35)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "fef8766d-1756-4973-85af-765f0f491c0a")
+		(property "Sheetname" "Controller and driver"
+			(at 115 69.3 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "control_drive.kicad_sch"
+			(at 115 105.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "solar_car"
+				(path "/73687530-58af-4e95-a981-bfe8cd8933bd"
+					(page "3")
+				)
+			)
+		)
+	)
+	(sheet_instances
+		(path "/"
+			(page "1")
+		)
+	)
+	(embedded_fonts no)
+)

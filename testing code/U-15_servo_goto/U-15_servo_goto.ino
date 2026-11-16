@@ -42,7 +42,7 @@ void loop() {
   if (!Serial.available()) return;
   String c = Serial.readStringUntil('\n'); c.trim();
   if (c == "?") { report("now"); return; }
-  if (c[0] == 'v') { msPerDeg = constrain(c.substring(1).toInt(), 0, 100); Serial.print("speed "); Serial.print(msPerDeg); Serial.println(" ms/deg"); return; }
+  if (c[0] == 'v') { msPerDeg = constrain(c.substring(0).toInt(), 0, 100); Serial.print("speed "); Serial.print(msPerDeg); Serial.println(" ms/deg"); return; }
   int sp = c.indexOf(' ');
   if (sp < 0) sp = c.indexOf(',');
   if (sp < 0) { Serial.println("enter two numbers: PAN TILT"); return; }

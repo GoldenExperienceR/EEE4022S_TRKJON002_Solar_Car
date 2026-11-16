@@ -343,7 +343,12 @@ void loop() {
   }
 
   applyDrive(); logDrive();
-  digitalWrite(MOVING_PIN, gear != 0 && thr > 0 && !blocked && !lvLock);   // tell the tracker the car is moving
+  // Tracker handshake (GPIO32 -> Nano D2): HIGH = moving (tracker parks flat), LOW = parked (tracker tracks the sun).
+  // Stays HIGH for 2 s after the car last moved, so throttle release, co-pilot blocking or coasting don't toggle the tracker.
+  static uint32_t tMove = 0;                                  // 0 = never moved since boot
+  bool driving = gear != 0 && thr > 0 && !blocked && !lvLock;
+  if (driving || mps > 0.05) tMove = now | 1;
+  digitalWrite(MOVING_PIN, tMove && now - tMove < 2000);
 
   static uint32_t t1 = 0, t10 = 0, t5 = 0, tLow = 0;
   if (now - t1 >= 1000) { t1 = now; powerCheck(); }
